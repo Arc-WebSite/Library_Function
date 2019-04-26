@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arc_Function_lua</title>
+    <link rel="icon" href="https://s8.hostingkartinok.com/uploads/images/2019/02/8243822c92e8fc50ddc97fee59db6685.png">
+    <link href="style/style.css" type="text/css" rel="stylesheet">
+
+    <script src="js/jquery-3.4.0.min.js"></script> <!-- биб. jquery -->
+    <script src="js/Filter_Site-For_Individual_Phrases_From_Word.js"></script> <!-- фильтр по странице -->
+    <script async src="js/Color_Highlighting_Of_Text_By_Input-Separately_Search_By_Words_From_Input.js"></script> <!-- подсветка при фильтре -->
+    <script async src="js/fixed_block_position.js"></script> <!-- закрепить блок при скроле -->
+    <script async src="js/Copy_to_clipboard_on_click_jQuery.js"></script><!-- "Выбрать, скопировать в буфер обмена и снять выделение" по клику "jQuery" -->
+    <script async src="js/style.display(inline-by_click;none-focus_loss_or_10_sec;).js"></script> <!-- image copy -->
+    <script src="js/Refresh_the_Page_if_you_resize.js"></script> <!-- обновить стр. -->
+</head>
+
+<body>
+
+    <!--************************************************************-->
+    
+    <div id="wrapped">  
+        <div id="left_Sidebar">
+            <div id="UP_LeftDiv"></div>
+            <a href="#UP_LeftDiv" class="UP_Left"></a>
+            <div class="TitleLogoSearch_div">
+                <h1>Archie</h1>
+                <img class="imgHead1" src="Image/Arc_1.png" width="100" height="100" alt="img">
+                <h1> ReaScripts</h1>
+                <div class="fixed_block_position">
+                    <div class="fixed_block">
+                        <input type="text" onkeyup="myFunction()" id="myInput" placeholder="Search Function">
+                        <!-- <input type="search" onkeyup="myFunction()" id="myInput" placeholder="Search Function"> -->
+                    </div>
+                </div>
+            </div>
+
+            <div id="left_function_div">
+                <ul id="myUL">
+                    
+                    <li><a href="#imgEnd">Page End </a></li> 
+
+                    <!--*** REAPER **** REAPER ***** REAPER ********-->
+                    <li><a href="#no_undo">no_undo</a></li>
+                    <li><a href="#Action">Action</a></li>
+                    <li><a href="#TrackFx_Rename">TrackFx_Rename</a></li> 
+                    <li><a href="#RemoveAllSendTr">RemoveAllSendTr</a></li>
+                    <li><a href="#RemoveAllItemTr_Sel">RemoveAllItemTr_Sel</a></li> 
+                    <li><a href="#SelectAllTracks">SelectAllTracks</a></li> 
+                    <li><a href="#SaveSoloMuteSelStateAllTracksGuidSlot_SWS">SaveSoloMuteSelStateAllTracksGuidSlot_SWS</a></li>
+                    <li><a href="#RestoreSoloMuteSelStateAllTracksGuidSlot_SWS">RestoreSoloMuteSelStateAllTracksGuidSlot_SWS</a></li>
+                    <li><a href="#js_ReaScriptAPI">js_ReaScriptAPI</a></li> 
+                    <li><a href="#SWS_API">SWS_API</a></li>
+                    <li><a href="#SetCollapseFolderMCP">SetCollapseFolderMCP</a></li>
+                    <li><a href="#GetPathAndNameSourceMediaFile_Take_SWS">GetPathAndNameSourceMediaFile_Take_SWS</a></li>
+                    <li><a href="#SetToggleButtonOnOff">SetToggleButtonOnOff</a></li>
+                    <li><a href="#HelpWindow_WithOptionNotToShow">HelpWindow_WithOptionNotToShow</a></li>
+                    <li><a href="#HelpWindowWhenReRunning">HelpWindowWhenReRunning</a></li>
+                    <li><a href="#DeleteMediaItem">DeleteMediaItem</a></li>
+                    <li><a href="#GetSampleNumberPosValue">GetSampleNumberPosValue</a></li>
+                    <li><a href="#SetMediaItemLeftTrim2">SetMediaItemLeftTrim2</a></li>
+                    <li><a href="#Save_Selected_Items_GuidSlot_SWS">Save_Selected_Items_GuidSlot_SWS</a></li>
+                    <li><a href="#Restore_Selected_Items_GuidSlot_SWS">Restore_Selected_Items_GuidSlot_SWS</a></li> 
+                    <li><a href="#SaveSoloMuteStateAllTracksGuidSlot_SWS">SaveSoloMuteStateAllTracksGuidSlot_SWS</a></li>
+                    <li><a href="#RestoreSoloMuteStateAllTracksGuidSlot_SWS">RestoreSoloMuteStateAllTracksGuidSlot_SWS</a></li>
+                    <li><a href="#SaveMuteStateAllItemsGuidSlot_SWS">SaveMuteStateAllItemsGuidSlot_SWS</a></li>
+                    <li><a href="#RestoreMuteStateAllItemsGuidSlot_SWS">RestoreMuteStateAllItemsGuidSlot_SWS</a></li>
+                    <li><a href="#GetPositionOfFirstItemAndEndOfLast">GetPositionOfFirstItemAndEndOfLast</a></li>
+                    <li><a href="#GetPositionOfFirstSelectedItemAndEndOfLast">GetPositionOfFirstSelectedItemAndEndOfLast</a></li>
+                    <li><a href="#RemoveStretchMarkersSavingTreatedWave_Render_SWS">RemoveStretchMarkersSavingTreatedWave_Render_SWS</a></li>
+                    <li><a href="#SaveSelTracksGuidSlot_SWS">SaveSelTracksGuidSlot_SWS</a></li>
+                    <li><a href="#RestoreSelTracksGuidSlot_SWS">RestoreSelTracksGuidSlot_SWS</a></li>
+                    <li><a href="#GetPreventSpectralPeaksInTrack">GetPreventSpectralPeaksInTrack</a></li> 
+                    <li><a href="#SetPreventSpectralPeaksInTrack">SetPreventSpectralPeaksInTrack</a></li>
+                    <li><a href="#CloseAllFxInAllItemsAndAllTake">CloseAllFxInAllItemsAndAllTake</a></li>
+                    <li><a href="#SetShow_HideTrackMCP">SetShow_HideTrackMCP</a></li>
+                    <li><a href="#CloseAllFxInAllTracks">CloseAllFxInAllTracks</a></li>
+                    <li><a href="#CloseToolbarByNumber">CloseToolbarByNumber</a></li>
+                    <li><a href="#GetMediaItemInfo_Value">GetMediaItemInfo_Value</a></li>
+                    <li><a href="#SetMediaItemInfo_Value">SetMediaItemInfo_Value</a></li>
+                    <li><a href="#Get_Format_ProjectGrid">Get_Format_ProjectGrid</a></li>
+                    <li><a href="#CountTrackSelectedMediaItems">CountTrackSelectedMediaItems</a></li>
+                    <li><a href="#GetTrackSelectedMediaItems">GetTrackSelectedMediaItems</a></li>
+
+                    <!--*** LUA **** LUA ***** LUA ********-->
+
+                    <li><a href="#If_Equals">If_Equals</a></li>
+                    <li><a href="#ValueFromMaxRepsIn_Table">ValueFromMaxRepsIn_Table</a></li>
+                    <li><a href="#randomOfVal">randomOfVal</a></li>
+                    <li><a href="#invert_number">invert_number</a></li>
+
+                    <!--***********************************-->
+
+                    <li><a href="#imgEnd">Page End </a></li> 
+                </ul>
+            </div>
+        </div>
+
+        <!-- ~~~~~~~~~~~~~~~~~ -->
+
+        <div id="right_Content">
+
+            <div id="UP_RightDiv"></div>
+            <a href="#UP_RightDiv" class="UP_Right"></a>
+
+            <div class="right_Content_wrapped">
+                <h2 class='right_Content_header'>
+                    Функции библиотеки 'Arc_Function_lua' <br>
+                    Library functions 'Arc_Function_lua'
+
+                </h2>
+                <div class="right_Content_InfoBlock_1">
+                    <p class="indentBottom"> <a href="https://www.reaper.fm/download.php" target="_blank">Reaper</a> -
+                        Оф.сайт.</p>
+                    <p>Для работы с функциями необходимо
+                        <a href="https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/ArchieScript/Archie_ReaScripts/blob/master/Functions/Arc_Function_lua.lua"
+                            target="_blank">скачать</a> и подключить библиотеку &nbsp;
+                        <a href="https://raw.githubusercontent.com/ArchieScript/Archie_ReaScripts/master/Functions/Arc_Function_lua.lua"
+                            target="_blank">
+                            "Arc_Function_lua"
+                        </a>
+                    </p>
+                    <p>
+                        а также для работы некоторых функций требуются расширение
+                        <a href="http://www.standingwaterstudios.com" target="_blank">
+                            &nbsp; SWS &nbsp;
+                        </a>
+                        и/или
+                        <a href="https://github.com/juliansader/ReaExtensions/tree/master/js_ReaScriptAPI"
+                            target="_blank">
+                            &nbsp; reaper_js_ReaScriptAPI &nbsp;
+                        </a>
+                    </p>
+                    <p>
+                        Если для работы каких либо функций требуются дополнительное расширение,
+                        то в конце функции стоит метка &nbsp;..._SWS &nbsp; или &nbsp;..._JS
+                    </p>
+                    <p>
+                        Например:
+                        <code style="color:rgb(148, 165, 0)"> Arc.function_SWS() </code>
+                        или
+                        <code style="color:rgb(148, 165, 0)"> Arc.function_JS() </code>
+                    </p>
+                </div>
+
+                <div class="right_Content_InfoBlock_2">
+                    <p class="indentTop">
+                        <a href="https://github.com/ArchieScript/Archie_ReaScripts/blob/master/Functions/Arc_Function_lua.lua#L1"
+                            target="_blank">
+                            GitHab
+                        </a> - Arc_Function_lua;
+                        <br>
+                        <a href="https://github.com/ArchieScript/Archie_ReaScripts" target="_blank">
+                            GitHab
+                        </a> - Archie_ReaScripts;</p>
+                </div>
+                <!-- 
+                <div class="right_Content_InfoBlock_3">
+                    <p> aaaaaaaaaaaaaa </p>
+                </div>
+                -->
+
+                <div class="right_wrapped_function">
+                    
+                   <!--  <marquee behavior="alternate">-->
+                        <h2 class="header_H2_right_wrapped_function">FUNCTIONS:</h2>
+                   <!--  </marquee> -->
+                   <br /><br /><h3>Reaper.</h3>
+
+
+
+                    <!-- *** REAPER *** REAPER *** REAPER *** REAPER *** REAPER *** -->
+
+
+                    <div class="right_function" id="no_undo">
+                        <code class="copy" id="no_undo_copy">
+                            Arc.no_undo();​
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br><br>
+                        <p>Что бы в ундо не прописывалось "ReaScript:Run" </p>
+                        <p> if not --[[???]] then Arc.no_undo(); return end;</p>
+                    </div>
+  
+
+                    <div class="right_function" id="Action">
+                        <code class="copy" id="Action_copy">
+                            Arc.Action(<em>Action</em> <i>id</i>, <em>[. . .]</em> );​
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Выполняет стандартные действие, id вписать через запятую для запуска нескольких действий;</p>
+                        <p>Arc.Action(id,id,id,id);</p>
+                    </div>
+                    
+
+                    <div class="right_function" id="TrackFx_Rename">
+                        <code class="copy" id="TrackFx_Rename_copy">
+                            <em>boolean</em> Arc.TrackFx_Rename( <em>MediaTrack</em> <i>Track</i>, <em>idx</em> <i>idx_Fx</i>, <em>Str</em> <i>Rename</i> );
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Переименовать Fx в треке.</p>
+                        <p> Вернет false если Fx отсутствует, в противном случае true.</p>
+                    </div>
+
+                    
+                    <div class="right_function" id="RemoveAllSendTr">
+                        <code class="copy" id="RemoveAllSendTr_copy">
+                            <em>boolean</em> Arc.RemoveAllSendTr(<em> MediaTrack</em><i> Track, </i><em>idx </em><i>category</i> );​
+                        </code>  
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Удалить все посылы в треке send / receive / hardware,  </p>
+                        <p> Вернёт true если удаление произошло</p>
+                        <p> Категория(category): &lt; 0 для receives, 0 = sends, > 0 для аппаратных выходов.</p>
+                    </div>
+                    
+                            
+                    <div class="right_function" id="RemoveAllItemTr_Sel">
+                        <code class="copy" id="RemoveAllItemTr_Sel_copy">
+                            <em>boolean</em> Arc.RemoveAllItemTr_Sel( <em>MediaTrack</em> <i>Track</i>, <em>idx</em> <i>rem_Idx</i> );​
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Удалить все / выделенные / невыделенные элементы в треке </p>
+                        <p> rem_Idx = 0 Удалить все невыделенные, = 1 удалить все выделенные, = 2 удалить все;</p>
+                        <p>Вернёт true если удаление произошло</p>
+                    </div>
+
+                    
+                    <div class="right_function" id="SelectAllTracks">
+                        <code class="copy" id="SelectAllTracks_copy">
+                            Arc.SelectAllTracks( <em>numb</em> <i>Sel</i> );
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Выделить Все Дорожки; Снять выделение со Всех Дорожек. (numb = 0 / 1) </p>
+                    </div>
+
+
+                    <div class="right_function" id="SaveSoloMuteSelStateAllTracksGuidSlot_SWS">
+                        <code class="copy" id="SaveSoloMuteSelStateAllTracksGuidSlot_SWS_copy">
+                            Arc.SaveSoloMuteSelStateAllTracksGuidSlot_SWS( <em>numb</em> <i>Slot</i> );
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Сохранить "Выделение, Соло, Mute" Состояние Всех Дорожек в слот "n".</p>
+                        <p>Востановить с помощью: <a href="#RestoreSoloMuteSelStateAllTracksGuidSlot_SWS">RestoreSoloMuteSelStateAllTracksGuidSlot_SWS</a></p>
+                    </div>
+
+
+                    <div class="right_function" id="RestoreSoloMuteSelStateAllTracksGuidSlot_SWS">
+                        <code class="copy" id="RestoreSoloMuteSelStateAllTracksGuidSlot_SWS_copy">
+                            Arc.RestoreSoloMuteSelStateAllTracksGuidSlot_SWS( <em>numb</em> <i>Slot</i>, <em>boolean</em> <i>clean</i> );
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Востановить "Выделение, Соло, Mute" Состояние Всех Дорожек из слота "n". </p>
+                        <p>clean = true или 1 - чтобы зачистить сохраненный кэш.</p>
+                        <p>Сохранить с помощью: <a href="#SaveSoloMuteSelStateAllTracksGuidSlot_SWS">SaveSoloMuteSelStateAllTracksGuidSlot_SWS</a></p>
+                    </div>
+                    
+                    
+                    <div class="right_function" id="js_ReaScriptAPI">
+                        <code class="copy" id="js_ReaScriptAPI_copy">
+                            <em>boolean</em> <i>Api_js</i> = Arc.js_ReaScriptAPI( <em>boolean</em> <i>warning message</i> );
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Проверяет, Установлено ли расширение 'reaper_js_ReaScriptAPI. </p>
+                        <p>Если установлено вернет true, в противном случае false и предупреждения.</p>
+                        <p>warning message: true - показать окно с предупреждением, false - не показать окно с предупреждением.</p>
+                    </div>
+
+                                      
+                    <div class="right_function" id="SWS_API">
+                        <code class="copy" id="SWS_API_copy">
+                            <em>boolean</em> <i>Api_sws</i> = Arc.SWS_API( <em>boolean</em> <i>warning message</i> );
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Проверяет, Установлено ли расширение 'SWS'. </p>
+                        <p>Если установлено вернет true, в противном случае false и предупреждения.</p>
+                        <p>warning message: true - показать окно с предупреждением, false - не показать окно с предупреждением.</p>
+                    </div>
+
+                                       
+                    <div class="right_function" id="SetCollapseFolderMCP">
+                        <code class="copy" id="SetCollapseFolderMCP_copy">
+                            Arc.SetCollapseFolderMCP( <em>MediaTrack</em> <i>Track</i>, <em>numb</em> <i>clickable</i>, <em>numb</em> <i>is_show</i> );
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Collapsed / Uncollapsed Track MCP (Свернуть / Развернуть Трек в Mикшере) </p>
+                        <p> clickable: 0 скрыть кликабельный значок для папок, 1 показать кликабельный значок для папок, иначе -1;</p>
+                        <p>is_show: 1 - скрыть, 0 показать:</p>
+                    </div>
+                
+                    
+                    <div class="right_function" id="GetPathAndNameSourceMediaFile_Take_SWS">
+                        <code class="copy" id="GetPathAndNameSourceMediaFile_Take_SWS_copy">
+                            <em>string</em> <i>Path, Name</i> = Arc.GetPathAndNameSourceMediaFile_Take_SWS( <em>MediaTake</em> <i>take</i> );
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Получить путь и имя исходного медиафайла у тейка </p>
+                        <p>В отличии от "reaper.GetMediaSourceFileName(source,filenamebuf)" не ломается на реверсных файлах и видит .png</p>
+                        <p>Если тейк содержит миди, то вернет false</p>
+                    </div>
+                    
+                    
+                    <div class="right_function" id="SetToggleButtonOnOff">
+                        <code class="copy" id="SetToggleButtonOnOff_copy">
+                            Arc.SetToggleButtonOnOff( <em>numb</em> <i>Set</i> );
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Установить переключатель вкл выкл (подсветка кнопки); </p>
+                        <p>Set:   0 выкл, 1 вкл. По умолчанию 0. </p>
+                    </div>
+
+                    
+                    <div class="right_function" id="HelpWindow_WithOptionNotToShow">
+                        <code class="copy" id="HelpWindow_WithOptionNotToShow_copy">
+                                <em>numb</em> = Arc.HelpWindow_WithOptionNotToShow( <em>String</em> <i>Text</i>, <em>String</em> <i>Header</i>, <em>str</em> <i>buf</i>, <em>boolean</em> <i>reset</i>);
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Окно справки с опцией не показывать; </p>
+                        <p>buf: хоть что - обычно "Arc_Function_lua" для навигации по ini;</p>
+                        <p>reset = true только для сброса, а так всегда false;</p>
+                        <p>return: ok 1; cancel 0; otherwise -1</p>
+                    </div>
+                    
+                    
+                    <div class="right_function" id="HelpWindowWhenReRunning">
+                        <code class="copy" id="HelpWindowWhenReRunning_copy">
+                                                    <em>String</em> Arc.HelpWindowWhenReRunning( <em>numb</em> <i>BottonText</i>, <em>str</em> <i>buf</i>, <em>boolean</em> <i>reset</i> );
+                                            </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Окно справки при повторном запуске скрипта.</p>
+                        <p>BottonText: 1 "'TERMINATE INSTANCES'", 2 "'NEW INSTANCE'"; </p>
+                        <p>buf: хоть что 'strung' / обычно "Arc_Function_lua" для навигации по ini;</p>
+                        <p>reset: true только для сброса, а так всегда false;
+                            <a href="https://s8.hostingkartinok.com/uploads/images/2018/12/e78e0eb7a23523f3cc4678a6a2a58511.png"
+                                target="_blank">Скриншот</a>
+                        </p>
+                    </div>
+     
+                    
+                    <div class="right_function" id="DeleteMediaItem">
+                        <code class="copy" id="DeleteMediaItem_copy">
+                            Arc.DeleteMediaItem( <em>MediaItem</em> <i>item</i> );
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Удалить элемент мультимедиа </p>
+                    </div>
+
+                    
+                    <div class="right_function" id="GetSampleNumberPosValue">
+                        <code class="copy" id="GetSampleNumberPosValue_copy">
+                            <em>table numb</em> <i>CountSamples_AllChannels, CountSamples_OneChannel, NumberSamplesAllChan, NumberSamplesOneChan, Sample_min, Sample_max, TimeSample</i> = Arc.GetSampleNumberPosValue(<em> MediaTake </em><i>take</i>,<em> numb </em><i>SkipNumberOfSamplesPerChannel</i>,<em> boolean </em><i>FeelVolumeOfItem</i>,<em> boolean </em><i>FeelVolumeOfTake</i>,<em> boolean </em><i>FeelVolumeOfEnvelopeItem</i>);
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Получить у образца номер значение позицию;</p>
+                        <p> Вернет: кол-во сэмплов во всех каналах, кол-во сэмплов в одном канале, номер сэмпла со всех каналов, номер
+                            сэмпла с одного канала, минимальное значение сэмпла, максимальное значение сэмпла, время сэмпла.</p>
+                        <p> SkipNumberOfSamplesPerChannel: Сколько сэмплов пропустить в секунду (обычно плэйрейт делим на сто - получится
+                            100 точек в секунду).</p>
+                        <p> FeelVolumeOfItem: false - не реагировать на громкость элемента, true - реагировать на громкость элемента.</p>
+                        <p> FeelVolumeOfTake: false - не реагировать на громкость тейка, true - реагировать на громкость тейка.</p>
+                        <p>FeelVolumeOfEnvelopeItem: false - не реагировать на автоматизацию громкости элемента, true - реагировать на
+                            автоматизацию громкости элемента.</p>
+                    </div>
+
+                    
+                    <div class="right_function" id="SetMediaItemLeftTrim2">
+                        <code class="copy" id="SetMediaItemLeftTrim2_copy">
+                            Arc.SetMediaItemLeftTrim2(<em> number </em><i>position</i>,<em> MediaItem </em><i>item</i> ); 
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Удлинить / укоротить Медиа Элемент Слева</p>
+                    </div>
+
+                    
+                    <div class="right_function" id="Save_Selected_Items_GuidSlot_SWS">
+                        <code class="copy" id="Save_Selected_Items_GuidSlot_SWS_copy">
+                            Arc.Save_Selected_Items_GuidSlot_SWS(<em> numb </em><i>Slot</i> );     
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Сохранить Выделенные элементы в слот "n"</p>
+                        <p>Востановить с помощью: <a href="#Restore_Selected_Items_GuidSlot_SWS">Restore_Selected_Items_GuidSlot_SWS</a></p>
+                    </div>
+
+                    
+                    <div class="right_function" id="Restore_Selected_Items_GuidSlot_SWS">
+                        <code class="copy" id="Restore_Selected_Items_GuidSlot_SWS_copy">
+                            Arc.Restore_Selected_Items_GuidSlot_SWS(<em> numb </em><i>Slot</i>,<em> boolean </em><i>clean</i> );
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Восстановить Выделенные элементы из слота "n"</p>
+                        <p>clean = true или 1 - чтобы зачистить сохраненный кэш.</p>
+                        <p>Сохранить с помощью: <a href="#Save_Selected_Items_GuidSlot_SWS">Save_Selected_Items_GuidSlot_SWS</a></p>
+                    </div>
+
+                    
+                    <div class="right_function" id="SaveSoloMuteStateAllTracksGuidSlot_SWS">
+                        <code class="copy" id="SaveSoloMuteStateAllTracksGuidSlot_SWS_copy">
+                                Arc.SaveSoloMuteStateAllTracksGuidSlot_SWS(<em> numb </em><i>Slot</i> );	
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Сохранить Соло Mute Состояние Всех Дорожек в слот "n"</p>
+                        <p>Востановить с помощью: <a href="#RestoreSoloMuteStateAllTracksGuidSlot_SWS">RestoreSoloMuteStateAllTracksGuidSlot_SWS</a></p>
+                    </div>
+
+                    
+                    <div class="right_function" id="RestoreSoloMuteStateAllTracksGuidSlot_SWS">
+                        <code class="copy" id="RestoreSoloMuteStateAllTracksGuidSlot_SWS_copy">
+                                Arc.RestoreSoloMuteStateAllTracksGuidSlot_SWS(<em> numb </em><i>Slot</i>, <em>boolean </em><i>clean</i> ); 
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Восстановить Соло Mute Состояние Всех Дорожек из слота "n"</p>
+                        <p>clean = true или 1 - чтобы зачистить сохраненный кэш</p>
+                        <p>Сохранить с помощью:<a href="#SaveSoloMuteStateAllTracksGuidSlot_SWS">SaveSoloMuteStateAllTracksGuidSlot_SWS</a></p>
+                    </div>
+ 
+
+                    <div class="right_function" id="SaveMuteStateAllItemsGuidSlot_SWS">
+                        <code class="copy" id="SaveMuteStateAllItemsGuidSlot_SWS_copy">
+                            Arc.SaveMuteStateAllItemsGuidSlot_SWS(<em> numb </em><i>Slot</i> );
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Сохранить Mute Состояние Всех Дорожек в слот "n"</p>
+                        <p>Востановить с помощью: <a href="#RestoreMuteStateAllItemsGuidSlot_SWS">RestoreMuteStateAllItemsGuidSlot_SWS</a></p>
+                    </div>
+ 
+                    
+                    <div class="right_function" id="RestoreMuteStateAllItemsGuidSlot_SWS">
+                        <code class="copy" id="RestoreMuteStateAllItemsGuidSlot_SWS_copy">
+                            Arc.RestoreMuteStateAllItemsGuidSlot_SWS(<em> numb </em><i>Slot</i>,<em> boolean </em><i>clean</i> );
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Восстановить Mute Состояние Всех Дорожек из слота "n"</p>
+                        <p>clean = true или 1 - чтобы зачистить сохраненный кэш.</p>
+                        <p>Сохранить с помощью: <a href="#SaveMuteStateAllItemsGuidSlot_SWS">SaveMuteStateAllItemsGuidSlot_SWS</a></p>
+                    </div>
+
+                    
+                    <div class="right_function" id="GetPositionOfFirstItemAndEndOfLast">
+                        <code class="copy" id="GetPositionOfFirstItemAndEndOfLast_copy">
+                                <em>numb</em> <i>PosFirstIt, EndLastIt</i> = Arc.GetPositionOfFirstItemAndEndOfLast();
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Получить Позицию Первого Элемента И Конец Последнего Элемента.</p>
+                    </div>
+
+                    
+                    <div class="right_function" id="GetPositionOfFirstSelectedItemAndEndOfLast">
+                        <code class="copy" id="GetPositionOfFirstSelectedItemAndEndOfLast_copy">
+                            <em>numb</em> <i>PosFirstIt,EndLastIt</i> = Arc.GetPositionOfFirstSelectedItemAndEndOfLast();
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Получить Позицию Первого Выделенного Элемента И Конец Последнего Выделенного Элемента.</p>
+                    </div>
+
+                    
+                    <div class="right_function" id="RemoveStretchMarkersSavingTreatedWave_Render_SWS">
+                        <code class="copy" id="RemoveStretchMarkersSavingTreatedWave_Render_SWS_copy">
+                            Arc.RemoveStretchMarkersSavingTreatedWave_Render_SWS( <em>MediaTake</em> <i>take</i> );
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Удалить Маркеры Растяжки, Сохраняя Обработанную Волну, Удаление происходит при помощи рендера и это может замедлять процесс (Render) </p>
+                    </div>
+
+
+                    <div class="right_function" id="SaveSelTracksGuidSlot_SWS">
+                        <code class="copy" id="SaveSelTracksGuidSlot_SWS_copy">
+                            Arc.SaveSelTracksGuidSlot_SWS( <em>numb</em> <i>Slot</i> );
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Сохранить Выделенные треки в слот "n".</p>
+                        <p>Востановить с помощью: <a href="#RestoreSelTracksGuidSlot_SWS">RestoreSelTracksGuidSlot_SWS</a></p>
+                    </div>
+
+
+                    <div class="right_function" id="RestoreSelTracksGuidSlot_SWS">
+                        <code class="copy" id="RestoreSelTracksGuidSlot_SWS_copy">
+                            Arc.RestoreSelTracksGuidSlot_SWS( <em>numb</em> <i>Slot</i>, <em>boolean</em> <i>clean</i> );
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Восстановить Выделенные треки из слота "n".</p>
+                        <p>clean = true или 1 - чтобы зачистить сохраненный кэш.</p>
+                        <p>Сохранить с помощью: <a href="#SaveSelTracksGuidSlot_SWS">SaveSelTracksGuidSlot_SWS</a></p>
+                    </div>
+
+                    
+                    <div class="right_function" id="GetPreventSpectralPeaksInTrack">
+                        <code class="copy" id="GetPreventSpectralPeaksInTrack_copy">
+                            <em>boolean</em> <i>Perf</i> = Arc.GetPreventSpectralPeaksInTrack( <em>MediaTrack</em> <i>Track</i> );
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Получить предотвращение спектральных пиков в треке </p>
+                    </div>
+
+                    
+                    <div class="right_function" id="SetPreventSpectralPeaksInTrack">
+                        <code class="copy" id="SetPreventSpectralPeaksInTrack_copy">
+                            Arc.SetPreventSpectralPeaksInTrack( <em>MediaTrack</em> <i>Track</i>, <em>boolean</em> <i>Perf</i> );
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Установить предотвращение спектральных пиков в треке. Perf = true - Вкл. Perf = false - Выкл </p>
+                    </div>
+
+                    
+                    <div class="right_function" id="CloseAllFxInAllItemsAndAllTake">
+                        <code class="copy" id="CloseAllFxInAllItemsAndAllTake_copy">
+                            Arc.CloseAllFxInAllItemsAndAllTake( <em>boolean</em> <i>chain</i>, <em>boolean</em> <i>float</i> );
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Закрыть Все Fx Во Всех Элементах И Во всех тейках. </p>
+                        <p> chain: true - закрыть только fx из списка, false не закрывать.</p>
+                        <p> float: true - закрыть только fx плавающие, false не закрывать.</p>
+                    </div>
+
+
+                    <div class="right_function" id="SetShow_HideTrackMCP">
+                        <code class="copy" id="SetShow_HideTrackMCP_copy">
+                            Arc.SetShow_HideTrackMCP( <em>MediaTrack</em> <i>Track</i>, <em>numb</em> <i>Setshow_hide</i> );
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Показать Скрыть дорожку в микшере (MCP). Setshow_hide: 0 или 1</p>
+                    </div>
+                    
+                    
+                    <div class="right_function" id="CloseAllFxInAllTracks">
+                        <code class="copy" id="CloseAllFxInAllTracks_copy">
+                                Arc.CloseAllFxInAllTracks( <em>boolean</em><i>chain</i>, <em>boolean</em><i>float</i> );
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Закрыть Все Fx На Всех Дорожках. </p>
+                        <p> chain: true - закрыть только fx из списка, false не закрывать из списка.</p>
+                        <p> float: true - закрыть только fx плавающие, false не закрывать плавающие.</p>
+                    </div>
+
+                    
+                    <div class="right_function" id="CloseToolbarByNumber">
+                        <code class="copy" id="CloseToolbarByNumber_copy">
+                                Arc.CloseToolbarByNumber( <em>idx</em> <i>ToolbarNumber</i> );
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Закрыть Панель Инструментов По Номеру. Несовместимо с верхним докером (top).</p>
+                        <p>ToolbarNumber: 1-16</p>
+                    </div>
+
+
+                    <div class="right_function" id="GetMediaItemInfo_Value">
+                        <code class="copy" id="GetMediaItemInfo_Value_copy">
+                                <em>numb</em> Arc.GetMediaItemInfo_Value( <em>MediaItem</em> <i>item</i>, <em>Str</em> <i>parmname</i> );
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Получить атрибуты числового значения элемента мультимедиа. </p>
+                        <p>parmname:</p>
+                        <p> D_END : Конечная позиция элемента от старта проекта в секундах.</p>
+                        <p>Так же <a href="https://www.extremraym.com/cloud/reascript-doc/#GetMediaItemInfo_Value" target="_blank">СМ.</a> другие атрибуты.</p>
+                    </div>
+
+                    
+                    <div class="right_function" id="SetMediaItemInfo_Value">
+                        <code class="copy" id="SetMediaItemInfo_Value_copy">
+                                Arc.SetMediaItemInfo_Value( <em>MediaItem</em> <i>item</i>, <em>Str</em> <i>parmname</i>, <em>numb</em> <i>val</i> );
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Установить атрибуты числовых значений элемента мультимедиа. </p>
+                        <p>parmname:</p>
+                        <p> D_END : Конечная позиция элемента от старта проекта в секундах.</p>
+                        <p> Так же <a href="https://www.extremraym.com/cloud/reascript-doc/#SetMediaItemInfo_Value" target="_blank">СМ.</a> другие атрибуты.</p>
+                    </div>
+
+
+                    <div class="right_function" id="Get_Format_ProjectGrid">
+                        <code class="copy" id="Get_Format_ProjectGrid_copy">
+                            <em>String</em> <i>GridFormVal</i> = Arc.Get_Format_ProjectGrid( <em>numb</em> <i>divisionIn</i> );
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Форматирует значение сетки проекта в удобочитаемую форму <a href="https://www.extremraym.com/cloud/reascript-doc/#GetSetProjectGrid" target="_blank">СМ.</a></p>
+                    </div>
+
+
+                    <div class="right_function" id="CountTrackSelectedMediaItems">
+                        <code class="copy" id="CountTrackSelectedMediaItems_copy">
+                            <em>numb</em> Arc.CountTrackSelectedMediaItems( <em>MediaTrack</em> <i>Track</i> );
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Количество в треке Выбранных Элементов. </p>
+                    </div>
+
+
+                    <div class="right_function" id="GetTrackSelectedMediaItems">
+                        <code class="copy" id="GetTrackSelectedMediaItems_copy">
+                                <em>MediaItem</em> <i>Item</i> = Arc.GetTrackSelectedMediaItems( <em>MediaTrack</em> <i>Track</i>, <em>idx</em> <i>itemidx</i> );
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Получить в треке Выбранный Элемент. </p>
+                    </div>
+
+
+                    <!-- *** LUA_Lib *** LUA_Lib *** LUA_Lib *** LUA_Lib *** LUA_Lib *** -->
+
+
+                    <br /><br /><br /><h3>Lua.</h3> <br /><br />
+
+
+                    <div class="right_function" id="If_Equals">
+                        <code class="copy" id="If_Equals_copy">
+                                <em>boolean</em> Arc.If_Equals( <em>Str</em> <i>EqualsToThat</i>, <em>Str</em> <i>...</i> );
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Сократить условие. Вернет true при совпадении, иначе false. </p>
+                        <br />
+                        <div class="div_Example">
+                            <small>
+                                Пример:<br />
+                                if item == item_1 or item == item_2 or item == item_3 or item == item_4 then код end;<br />
+                                if If_Equals(item, item_1, item_2, item_3, item_4 ) then код end;<br />
+                            </small>
+                        </div>
+                    </div>
+
+                    
+                    <div class="right_function" id="ValueFromMaxRepsIn_Table">
+                        <code class="copy" id="ValueFromMaxRepsIn_Table_copy">
+                                <em>numb boolean</em> Arc.ValueFromMaxRepsIn_Table( <em>table</em> <i>array</i>, <em>Str</em> <i>min_max</i> );
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Вернет значение из максимальных повторений в таблице. </p>
+                        <p>array: таблица, min_max: "MIN", "MAX", "RANDOM"</p>
+                        <br />
+                        <div class="div_Example">
+                            <small>
+                                пример:<br />
+                                t1{1,2,3,4,5,6,7}; вернет false - повторений нет<br />
+                                t2{1,2,3,3,4,5,6}; вернет 3; min_max необязателен<br />
+                                t3{1,1,2,2,3,4,5}; вернет 1; если min_max = "MIN", 2 если min_max = "MAX", случайное число 1 или 2 если min_max = "RANDOM" <br />
+                                t4{1,1,2,2,5,5,5}; вернет 5; min_max необязателен<br />
+                                t5{1,2,5,5,1,1,5}; вернет 1 или 5 в зависимости от min_max (читать t3) <br />
+                            </small>
+                        </div>
+                    </div>
+
+
+                    <div class="right_function" id="randomOfVal">
+                        <code class="copy" id="randomOfVal_copy">
+                            <em>numb String</em> Arc.randomOfVal(<em>numb Str</em> <i>...</i> );
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Вернет случайное из значений. </p>
+                        <p> пример: Val = randomOfVal("one","two",1,2); Вывод: "one" или "two" или 1 или 2.</p>
+                    </div>
+
+                    
+                    <div class="right_function" id="invert_number">
+                        <code class="copy" id="invert_number_copy">
+                            <em>numb</em> <i>number</i> Arc.invert_number(<em>numb</em> <i>X</i>);
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Инвертировать число из минуса в плюс и наоборот. Например: Arc.invert_number(20); вернет -20; Arc.invert_number(-20); вернет 20; </p>
+                    </div>
+
+
+
+                    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    <em> Некопирует </em> <i>Копирует</i>  НЕ ЗАБУДЬ ПРО КАТЕГОРИЮ РИПЕР / ЛУА
+                    <li><a href="#FUNCTION">FUNCTION</a></li> // ЛЕВАЯ ФУНКЦИЯ - ВВЕРХ //
+                    
+                    <div class="right_function" id="FUNCTION">
+                        <code class="copy" id="FUNCTION_copy">
+                            <em>number</em> = Arc.FUNCTION( <em>MediaTrack</em> <i>Track</i>, <em>idx</em> <i>Tr_Idx</i> );​
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>описание </p>
+                        <p> описание</p>
+                        <p> описание</p>
+                        <p> описание</p>
+                        <p> описание</p>
+                        <p> описание</p>
+                        <p> описание</p>
+                        <p> описание</p>
+                        <div class="div_Example">
+                            <small>
+                                пример:<br />
+                                ...<br />
+                            </small>
+                        </div>
+                    </div>
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                    
+                    <img class='TheEnd' src="https://s8.hostingkartinok.com/uploads/images/2019/04/f5c5c30c7fe53cd38a03aec91d04dfa5.png" style="width:100%; height:100%" alt="тут должна быть картинка">
+                    <p id="imgEnd"></p>
+                </div>
+            </div><!--right_Content_wrapped-->
+        </div><!--right_Content-->
+    </div><!--wrapped-->
+
+
+
+
+
+    <!-- ***************************************************************************** -->
+    <!--<script src="js/jquery-3.4.0.min.js"></script> <!- биб. jquery -->
+    <!--<script src="js/Website_Filter.js"></script> <!- фильтр по странице -->
+    <!--<script src="js/highlight_text_by_input.js"></script> <!- подсветка при фильтре -->
+    <!--<script src="js/fixed_block_position.js"></script> <!- закрепить блок при скроле -->
+    <!--<script src="js/Copy_to_clipboard_on_click_jQuery.js"></script><!- Выбрать и скопировать в буфер обмена по клику jQuery -->
+    <!--<script src="js/style.display(inline-by_click;none-focus_loss_or_10_sec;).js"></script> <!- image copy -->
+    <!--<script src="js/Refresh_the_Page_if_you_resize.js"></script> <!- обновить стр. -->
+    <!-- Подкл.Скрипта,внизу для того что бы сайт быстрее прогружался -->
+    <!-- ***************************************************************************** -->
+
+</body>
+</html>
