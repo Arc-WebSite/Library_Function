@@ -56,7 +56,7 @@
                     <li><a href="#SWS_API">SWS_API</a></li>
                     <li><a href="#SetCollapseFolderMCP">SetCollapseFolderMCP</a></li>
                     <li><a href="#GetPathAndNameSourceMediaFile_Take_SWS">GetPathAndNameSourceMediaFile_Take_SWS</a></li>
-                    <li><a href="#SetToggleButtonOnOff">SetToggleButtonOnOff</a></li>
+                    <li><a href="#GetSetToggleButtonOnOff">GetSetToggleButtonOnOff</a></li>
                     <li><a href="#HelpWindow_WithOptionNotToShow">HelpWindow_WithOptionNotToShow</a></li>
                     <li><a href="#HelpWindowWhenReRunning">HelpWindowWhenReRunning</a></li>
                     <li><a href="#DeleteMediaItem">DeleteMediaItem</a></li>
@@ -314,14 +314,15 @@
                     </div>
                     
                     
-                    <div class="right_function" id="SetToggleButtonOnOff">
+                    <div class="right_function" id="GetSetToggleButtonOnOff">
                         <code class="copy" id="SetToggleButtonOnOff_copy">
-                            Arc.SetToggleButtonOnOff( <em>numb</em> <i>Set</i> );
+                            Arc.GetSetToggleButtonOnOff(<em>numb</em> <i>onOff</i>,<em>boolean</em> <i>Set</i>);
                         </code>
                         <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
                         <br /><br />
                         <p>Установить переключатель вкл выкл (подсветка кнопки); </p>
-                        <p>Set:   0 выкл, 1 вкл. По умолчанию 0. </p>
+                        <p>onOff:  0 выкл, 1 вкл. По умолчанию 0 </p>
+						<p>Set:  true = Set; false = Get </p>
                     </div>
 
                     
