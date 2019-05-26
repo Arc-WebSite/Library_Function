@@ -84,6 +84,7 @@
                     <li><a href="#Get_Format_ProjectGrid">Get_Format_ProjectGrid</a></li>
                     <li><a href="#CountTrackSelectedMediaItems">CountTrackSelectedMediaItems</a></li>
                     <li><a href="#GetTrackSelectedMediaItems">GetTrackSelectedMediaItems</a></li>
+					<li><a href="#GetSetHeigthMCPTrack">GetSetHeigthMCPTrack</a></li>
 
                     <!--*** LUA **** LUA ***** LUA ********-->
 
@@ -629,13 +630,25 @@
 
                     <div class="right_function" id="GetTrackSelectedMediaItems">
                         <code class="copy" id="GetTrackSelectedMediaItems_copy">
-                                <em>MediaItem</em> <i>Item</i> = Arc.GetTrackSelectedMediaItems( <em>MediaTrack</em> <i>Track</i>, <em>idx</em> <i>itemidx</i> );
+                            <em>MediaItem</em> <i>Item</i> = Arc.GetTrackSelectedMediaItems( <em>MediaTrack</em> <i>Track</i>, <em>idx</em> <i>itemidx</i> );
                         </code>
                         <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
                         <br /><br />
                         <p>Получить в треке Выбранный Элемент. </p>
                     </div>
 
+
+                    <div class="right_function" id="GetSetHeigthMCPTrack">
+                        <code class="copy" id="GetSetHeigthMCPTrack_copy">
+                            <em>numb = </em>Arc.GetSetHeigthMCPTrack(<em>MediaTrack </em><i>Track</i>,<em> numb</em><i> numbHeigth</i>,<em> numb</em><i> set</i>);
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>set 0: Вернет высоту трека от 0 до 1;  0 самый высокий, 1 самый маленький.</p>
+						<p>numb: от 0 до 1;  0 самый высокий, 1 самый маленький.</p>
+						<p>set: 1 set, 0 get.</p>
+                    </div>
+					
 
                     <!-- *** LUA_Lib *** LUA_Lib *** LUA_Lib *** LUA_Lib *** LUA_Lib *** -->
 
