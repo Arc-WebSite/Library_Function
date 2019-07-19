@@ -92,6 +92,7 @@
                     <!--*** LUA **** LUA ***** LUA ********-->
 
                     <li><a href="#If_Equals">If_Equals</a></li>
+					<li><a href="#If_Equals_OrEx">If_Equals_OrEx</a></li>
                     <li><a href="#ValueFromMaxRepsIn_Table">ValueFromMaxRepsIn_Table</a></li>
                     <li><a href="#randomOfVal">randomOfVal</a></li>
                     <li><a href="#invert_number">invert_number</a></li>
@@ -707,7 +708,7 @@
 
                     <div class="right_function" id="If_Equals">
                         <code class="copy" id="If_Equals_copy">
-                                <em>boolean</em> Arc.If_Equals( <em>Str</em> <i>EqualsToThat</i>, <em>Str</em> <i>...</i> );
+                                <em>boolean</em> Arc.If_Equals( <em>Str</em> <i>If_Equals_Or</i>, <em>Str</em> <i>...</i> );
                         </code>
                         <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
                         <br /><br />
@@ -721,7 +722,35 @@
                             </small>
                         </div>
                     </div>
-
+                    
+					
+					
+					<div class="right_function" id="If_Equals_OrEx">
+                        <code class="copy" id="If_Equals_OrEx">
+                                <em>boolean</em> Arc.If_Equals_OrExF( <em>Str</em> <i>If_Equals_Or</i>, <em>Str/table</em> <i>...</i> );
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p> Тоже самое, что и  If_Equals_Or , только ищет значения еще и в таблицах </p>
+                        <p> Сравнить значение EqualsToThat на совпадения со значением из таблицы или переданным аргументом </p>
+                        <br />
+                        <div class="div_Example">
+                            <small>
+                                Пример:<br />
+								EqualsToThat = "arg4"<br />
+								T1 = {"arg1", "arg2"}<br />
+								T2 = {"arg3", "arg4"}<br />
+								Ar = "Arg5"<br />
+								Boolean = If_Equals_OrEx(WavMidVideo , T1,T2,Ar) -- Вернет true<br />
+								Boolean = If_Equals_OrEx(WavMidVideo , T1, Ar)   -- Вернет false<br />
+                            </small>
+                        </div>
+                    </div>
+					
+					
+					
+					
+					
                     
                     <div class="right_function" id="ValueFromMaxRepsIn_Table">
                         <code class="copy" id="ValueFromMaxRepsIn_Table_copy">
