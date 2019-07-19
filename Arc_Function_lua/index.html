@@ -91,7 +91,7 @@
 
                     <!--*** LUA **** LUA ***** LUA ********-->
 
-                    <li><a href="#If_Equals">If_Equals</a></li>
+                    <li><a href="#If_Equals_Or">If_Equals_Or</a></li>
 					<li><a href="#If_Equals_OrEx">If_Equals_OrEx</a></li>
                     <li><a href="#ValueFromMaxRepsIn_Table">ValueFromMaxRepsIn_Table</a></li>
                     <li><a href="#randomOfVal">randomOfVal</a></li>
@@ -706,9 +706,9 @@
                     <br /><br /><br /><h3>Lua.</h3> <br /><br />
 
 
-                    <div class="right_function" id="If_Equals">
-                        <code class="copy" id="If_Equals_copy">
-                                <em>boolean</em> Arc.If_Equals( <em>Str</em> <i>If_Equals_Or</i>, <em>Str</em> <i>...</i> );
+                    <div class="right_function" id="If_Equals_Or">
+                        <code class="copy" id="If_Equals_Or">
+                                <em>boolean</em> Arc.If_Equals_Or( <em>Str</em> <i>If_Equals_Or</i>, <em>Str</em> <i>...</i> );
                         </code>
                         <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
                         <br /><br />
@@ -724,14 +724,13 @@
                     </div>
                     
 					
-					
 					<div class="right_function" id="If_Equals_OrEx">
                         <code class="copy" id="If_Equals_OrEx">
-                                <em>boolean</em> Arc.If_Equals_OrExF( <em>Str</em> <i>If_Equals_Or</i>, <em>Str/table</em> <i>...</i> );
+                                <em>boolean</em> Arc.If_Equals_OrEx( <em>Str</em> <i>If_Equals_Or</i>, <em>Str/table</em> <i>...</i> );
                         </code>
                         <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
                         <br /><br />
-                        <p> Тоже самое, что и  If_Equals_Or , только ищет значения еще и в таблицах </p>
+                        <p> Тоже самое, что и  <a href="#If_Equals_Or">If_Equals_Or</a> , только ищет значения еще и в таблицах </p>
                         <p> Сравнить значение EqualsToThat на совпадения со значением из таблицы или переданным аргументом </p>
                         <br />
                         <div class="div_Example">
@@ -748,10 +747,6 @@
                     </div>
 					
 					
-					
-					
-					
-                    
                     <div class="right_function" id="ValueFromMaxRepsIn_Table">
                         <code class="copy" id="ValueFromMaxRepsIn_Table_copy">
                                 <em>numb boolean</em> Arc.ValueFromMaxRepsIn_Table( <em>table</em> <i>array</i>, <em>Str</em> <i>min_max</i> );
