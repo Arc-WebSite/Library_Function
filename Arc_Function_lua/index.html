@@ -669,11 +669,12 @@
 
 					<div class="right_function" id="GetIDByScriptName">
                         <code class="copy" id="GetIDByScriptName_copy">
-                              <em>String</em> <i>id</i> = Arc.GetIDByScriptName(<em>string </em><i>scriptName</i><em> </em>);
+                              <em>String</em> <i>id</i> = Arc.GetIDByScriptName(<em>string </em><i>scriptName,</i><em>string </em><i>[[scriptName]]</i><em> </em>);
                         </code>
                         <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
                         <br /><br />
                         <p>Получить Id по имени скрипта или кастом экшена</p>
+						<p>scriptPath: Необязательный параметр, на случай если присутствует несколько скриптов с одинаковым именем</p>
 						<p>В случае неудачи вернет -1</p>
                     </div>
 					
