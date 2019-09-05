@@ -707,20 +707,17 @@
 						<p>"ONE" удалить действие из автозагрузки из функции установленной в nameFun и с id установленного в id.(nameAction*) </p>
                         <p>"ALL" удалить все что в функции nameFun (id при ALL равен пустой строкой "").(nameAction*)</p>
 						<p>*nameAction при очистке может быть любой строкой(так как этот параметр не работает), но не менее 6 символов, для того что бы пропустила функция,.</p>
-						<p></p>
-						<p></p>
-                    </div>
-					<br />
-					<div class="div_Example">
-						<small>
-							 Пример:
-							 local scrPath,scrName = ({reaper.get_action_context()})[2]:match("(.+)[/\\](.+)")
-							 local ID = Arc.GetIDByScriptName(scrName,scrPath); 
-							 if ID == -1 or type(ID) ~= "string" then Arc.no_undo()return end;
-							 Arc.StartupScript(scrName,ID,"ArchieScript");
-						</small>
+						<br />
+						<div class="div_Example">
+							<small>
+								 Пример:<br />
+								 local scrPath,scrName = ({reaper.get_action_context()})[2]:match("(.+)[/\\](.+)")<br />
+								 local ID = Arc.GetIDByScriptName(scrName,scrPath); <br />
+								 if ID == -1 or type(ID) ~= "string" then Arc.no_undo()return end;<br />
+								 Arc.StartupScript(scrName,ID,"ArchieScript");<br />
+							</small>
+						</div>
 					</div>
-
 
 
 
