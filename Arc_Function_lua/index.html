@@ -89,6 +89,9 @@
 					<li><a href="#GetScriptNameByID">GetScriptNameByID</a></li>
 					<li><a href="#openFileURL">openFileURL</a></li>
 					<li><a href="#StartupScript">StartupScript</a></li>
+					<li><a href="#GetTrackAutoRecArm"></a>GetTrackAutoRecArm</li>
+					<li><a href="#SetTrackAutoRecArm"></a>SetTrackAutoRecArm</li>
+
 
                     <!--*** LUA **** LUA ***** LUA ********-->
 
@@ -721,10 +724,26 @@
 
 
 
+					<div class="right_function" id="GetTrackAutoRecArm">
+                        <code class="copy" id="GetTrackAutoRecArm_copy">
+                              <em>String</em> <i>name</i> = Arc.GetTrackAutoRecArm(<em>MediaTrack </em><i>Track</i>);
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Получить значение автозаписи on/off</p>
+						<p>Вернет 1 если включена и 0 если выключена</p>
+                    </div>
 
 
 
-
+					<div class="right_function" id="SetTrackAutoRecArm">
+                        <code class="copy" id="SetTrackAutoRecArm_copy">
+                              <em>String</em> <i>name</i> = Arc.SetTrackAutoRecArm(<em>MediaTrack </em><i>Track,</i><em>number </em><i>value</i>);
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Установите автозапись на треке / 0-1 / true-false;</p>
+                    </div>
 
 
 
