@@ -750,7 +750,7 @@
 					
 					<div class="right_function" id="SetHeightTrack_Env_TCP">
                         <code class="copy" id="SetHeightTrack_Env_TCP_copy">
-                              Arc.SetHeightTrack_Env_TCP(<em>MediaTrack </em><i>Track,</i><em>number </em><i>Height,</i><em>number minSize,number resetSize,number PercentageDefault</i>);
+                              <em>boolean </em><i>retval,</i><em>numb </em><i>newHeigth</i> = Arc.SetHeightTrack_Env_TCP(<em>MediaTrack </em><i>Track,</i><em>number </em><i>Height,</i><em>number minSize,number resetSize,number PercentageDefault</i>);
                         </code>
                         <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
                         <br /><br />
@@ -759,7 +759,7 @@
 						<p>resetSize: = 1 - при уменьшении env трека с пользовательской высотой, при достижении minSize сбросить в 0 (по умолчанию 0)</p>
 						<p>PercentageDefault: Процент погибающей по умолчанию относительно трека TCP(по умолчанию 0.75)</p>
 						<p>minSize, resetSize, PercentageDefault: Необязательные параметры</p>
-						<p>Вернет true в случае успеха</p>
+						<p>Вернет true в случае успеха и новый размер трека который удалось установить</p>
                     </div>
 					
 
