@@ -91,6 +91,7 @@
 					<li><a href="#StartupScript">StartupScript</a></li>
 					<li><a href="#GetTrackAutoRecArm">GetTrackAutoRecArm</a></li>
 					<li><a href="#SetTrackAutoRecArm">SetTrackAutoRecArm</a></li>
+					<li><a href="#SetHeightTrack_Env_TCP">SetHeightTrack_Env_TCP</a></li>
 
 
                     <!--*** LUA **** LUA ***** LUA ********-->
@@ -744,6 +745,23 @@
                         <br /><br />
                         <p>Установите автозапись на треке / 0-1 / true-false;</p>
                     </div>
+					
+					
+					
+					<div class="right_function" id="SetHeightTrack_Env_TCP">
+                        <code class="copy" id="SetHeightTrack_Env_TCP_copy">
+                              Arc.SetHeightTrack_Env_TCP(<em>MediaTrack </em><i>Track,</i><em>number </em><i>Height,</i><em>number minSize,number resetSize,number PercentageDefault</i>);
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Height: Высота в пикселях которую нужно установить</p>
+						<p>minSize: минимальный размер трека(по умолчанию 24)</p>
+						<p>resetSize: = 1 - при уменьшении env трека с пользовательской высотой, при достижении minSize сбросить в 0 (по умолчанию 0)</p>
+						<p>PercentageDefault: Процент погибающей по умолчанию относительно трека TCP(по умолчанию 0.75)</p>
+						<p>minSize, resetSize, PercentageDefault: Необязательные параметры</p>
+						<p>Вернет true в случае успеха</p>
+                    </div>
+					
 
 
 
