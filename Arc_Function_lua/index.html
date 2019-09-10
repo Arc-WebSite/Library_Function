@@ -750,16 +750,16 @@
 					
 					<div class="right_function" id="SetHeightTrack_Env_TCP">
                         <code class="copy" id="SetHeightTrack_Env_TCP_copy">
-                              <em>boolean </em><i>retval, </i><em>numb </em><i>newHeigth</i> = Arc.SetHeightTrack_Env_TCP(<em>MediaTrack </em><i>Track,</i><em>number </em><i>Height [, </i><em>number </em><i> minSize, </i><em>number </em><i>resetSize, </i><em>number </em><i>PercentageDefault ] </i>);
+                              <em>boolean </em><i>retval, </i><em>numb </em><i>newHeigth</i> = Arc.SetHeightTrack_Env_TCP(<em>MediaTrack </em><i>Track,</i><em>number </em><i>Height [, </i><em>number </em><i> minHeigth, </i><em>number </em><i>resetHeigthEnv, </i><em>number </em><i>PercentageDefault ] </i>);
                         </code>
                         <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
                         <br /><br />
 						<p>Установить высоту трека совместно с огибающими</p>
                         <p>Height: Высота в пикселях которую нужно установить</p>
-						<p>minSize: минимальный размер трека(по умолчанию 24)</p>
-						<p>resetSize: = 1 - при уменьшении env трека с пользовательской высотой, при достижении minSize сбросить в 0 (по умолчанию 0)</p>
+						<p>minHeigth: минимальный размер трека(по умолчанию 24)</p>
+						<p>resetHeigthEnv: = 1 - при уменьшении env трека с пользовательской высотой,при достижении minHeigth сбросить в 0(по умолчанию 0)</p>
 						<p>PercentageDefault: Процент погибающей по умолчанию относительно трека TCP(по умолчанию 0.75)</p>
-						<p>minSize, resetSize, PercentageDefault: Необязательные параметры</p>
+						<p>minHeigth, resetHeigthEnv, PercentageDefault: Необязательные параметры</p>
 						<p>Вернет true в случае успеха</p>
 						<p>После изменения всех треков вызовите reaper.TrackList_AdjustWindows(false);</p>
                     </div>
