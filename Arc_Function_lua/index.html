@@ -750,7 +750,7 @@
 					
 					<div class="right_function" id="SetHeightTrack_Env_TCP">
                         <code class="copy" id="SetHeightTrack_Env_TCP_copy">
-                              <em>boolean </em><i>retval, </i><em>numb </em><i>newHeigth</i> = Arc.SetHeightTrack_Env_TCP(<em>MediaTrack </em><i>Track,</i><em>number </em><i>Height, </i><em>number minSize,  number resetSize,  number PercentageDefault</i>);
+                              <em>boolean </em><i>retval, </i><em>numb </em><i>newHeigth</i> = Arc.SetHeightTrack_Env_TCP(<em>MediaTrack </em><i>Track,</i><em>number </em><i>Height</i><em>, number minSize,  number resetSize,  number PercentageDefault</em>);
                         </code>
                         <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
                         <br /><br />
@@ -761,6 +761,7 @@
 						<p>PercentageDefault: Процент погибающей по умолчанию относительно трека TCP(по умолчанию 0.75)</p>
 						<p>minSize, resetSize, PercentageDefault: Необязательные параметры</p>
 						<p>Вернет true в случае успеха и новый размер трека который удалось установить</p>
+						<p>Не работает внутри "reaper.PreventUIRefresh(1)" возвращает старый размер, так как трек не обновил высоту</p>
                     </div>
 					
 
