@@ -40,9 +40,12 @@
 
             <div id="left_function_div">
                 <ul id="myUL">
-
-                    <li><a href="#imgEnd">Page End </a></li>
-
+                    
+					<li><a href="#Functions_Section">↑↑↑ Functions ↑↑↑</a></li>
+					<li><a href="#LUA_Section"> --- LUA --- </a></li>
+					<li><a href="#imgEnd">↓↓↓ Page End ↓↓↓</a></li>
+                    <li></li>
+					
                     <!--*** REAPER **** REAPER ***** REAPER ********-->
                     <li><a href="#no_undo">no_undo</a></li>
                     <li><a href="#Action">Action</a></li>
@@ -88,12 +91,16 @@
 					<li><a href="#GetIDByScriptName">GetIDByScriptName</a></li>
 					<li><a href="#GetScriptNameByID">GetScriptNameByID</a></li>
 					<li><a href="#openFileURL">openFileURL</a></li>
-					<li><a href="#StartupScript">StartupScript</a></li>
 					<li><a href="#GetTrackAutoRecArm">GetTrackAutoRecArm</a></li>
 					<li><a href="#SetTrackAutoRecArm">SetTrackAutoRecArm</a></li>
 					<li><a href="#SetHeightTrack_Env_TCP">SetHeightTrack_Env_TCP</a></li>
-
-
+					<li><a href="#SetStartupScript">SetStartupScript</a></li>
+		        	<li><a href="#GetStartupScript">GetStartupScript</a></li>
+					
+					<li></li>
+                    <li><a href="#LUA_Section"> --- LUA --- </a></li>
+					<li></li>
+					
                     <!--*** LUA **** LUA ***** LUA ********-->
 
                     <li><a href="#If_Equals_Or">If_Equals_Or</a></li>
@@ -176,6 +183,7 @@
                 <div class="right_wrapped_function">
 
                    <!--  <marquee behavior="alternate">-->
+				        <div id="Functions_Section"></div>
                         <h2 class="header_H2_right_wrapped_function">FUNCTIONS:</h2>
                    <!--  </marquee> -->
                    <br /><br /><h3>Reaper.</h3>
@@ -681,6 +689,10 @@
                         <br /><br />
                         <p>Получить Id по имени скрипта или кастом экшена</p>
 						<p>scriptPath: Необязательный параметр, на случай если присутствует несколько скриптов с одинаковым именем</p>
+						<p>если присутствует несколько скриптов с одинаковым именем и если не указать scriptPath,
+						   то вернет первый найденный, а если указать scriptPath, то вернет точный результат</p>
+						<p></p>
+						<p></p>
 						<p>В случае неудачи вернет -1</p>
                     </div>
 
@@ -695,34 +707,6 @@
                         <p>Получить имя скрипта или кастом экшена по ID</p>
 						<p>В случае неудачи вернет -1</p>
                     </div>
-
-
-
-					<div class="right_function" id="StartupScript">
-                        <code class="copy" id="StartupScript_copy">
-                              Arc.StartupScript(<em>string </em><i>nameAction,</i><em>string </em><i>id,</i><em>string </em><i>nameFun,</i><em>string </em><i>Clean</i>);
-                        </code>
-                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
-                        <br /><br />
-                        <p>Добавить скрипт в автозагрузку</p>
-						<p>nameAction: Имя экшена или скрипта добавляемого в автозагрузку</p>
-						<p>id: id экшена или скрипта добавляемого в автозагрузку</p>
-						<p>nameFun: Имя с которым будет создана функция в автозагрузке, обычно это свой ник. Например: "ArchieScript" *#8</p>
-						<p>Clean: </p>
-						<p>"ONE" удалить действие из автозагрузки из функции установленной в nameFun и с id установленного в id.(nameAction*) </p>
-                        <p>"ALL" удалить все что в функции nameFun (id при ALL равен пустой строкой "").(nameAction*)</p>
-						<p>*nameAction при очистке может быть любой строкой(так как этот параметр не работает), но не менее 6 символов, для того что бы пропустила функция,.</p>
-						<br />
-						<div class="div_Example">
-							<small>
-								 Пример:<br />
-								 local scrPath,scrName = ({reaper.get_action_context()})[2]:match("(.+)[/\\](.+)")<br />
-								 local ID = Arc.GetIDByScriptName(scrName,scrPath); <br />
-								 if ID == -1 or type(ID) ~= "string" then Arc.no_undo()return end;<br />
-								 Arc.StartupScript(scrName,ID,"ArchieScript");<br />
-							</small>
-						</div>
-					</div>
 
 
 
@@ -778,16 +762,65 @@
                     </div>
 					
 					
+					
+					<div class="right_function" id="SetStartupScript">
+                        <code class="copy" id="SetStartupScript_copy">
+                              Arc.SetStartupScript(<em>string </em><i>nameAction,</i><em>string </em><i>id,</i><em>string </em><i>nameFun,</i><em>string </em><i>Clean</i>);
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+						<p>С данной функцией нужно быть предельно аккуратным</p>
+						<p>Добавить скрипт в автозагрузку</p>
+						<p>Если нужно дважды добавить один и тот же скрипт в автозагрузку, то делаем цикл в скрипте и добавляем этот скрипт</p>
+						<p>Дважды один и тот же скрипт добавить в автозагрузку с помощью данной функции нельзя</p>
+						<p>nameAction: Имя экшена или скрипта добавляемого в автозагрузку</p>
+						<p>id: id экшена или скрипта добавляемого в автозагрузку</p>
+						<p>nameFun: Имя с которым будет создана функция в автозагрузке, обычно это свой ник. Например: "ArchieScript" *#8</p>
+						<p>Clean: </p>
+						<p>"ONE" удалить действие из автозагрузки из функции установленной в nameFun и с id установленного в id.(nameAction*) </p>
+                        <p>"ALL" удалить все что в функции nameFun (id при ALL равен пустой строкой "").(nameAction*)</p>
+						<p>*nameAction при очистке может быть любой строкой(так как этот параметр не работает), но не менее 6 символов, для того что бы пропустила функция,.</p>
+						<br />
+						<div class="div_Example">
+							<small>
+								 Пример:<br />
+								 local scrPath,scrName = ({reaper.get_action_context()})[2]:match("(.+)[/\\](.+)")<br />
+								 local ID = Arc.GetIDByScriptName(scrName,scrPath); <br />
+								 if ID == -1 or type(ID) ~= "string" then Arc.no_undo()return end;<br />
+								 Arc.StartupScript(scrName,ID,"ArchieScript");<br />
+							</small>
+						</div>
+						<p>See: <a href="#GetStartupScript">GetStartupScript</a></p>
+					</div>
+					
+					
+                    
+					<div class="right_function" id="GetStartupScript">
+                        <code class="copy" id="GetStartupScript_copy">
+                            <em>boolean </em><i>check_Id,</i> <em>boolean </em><i>check_Fun</i> = Arc.GetStartupScript(<em>string </em><i>id,</i><em>string </em><i>nameFun</i>);
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Получить - установлен ли скрипт в автозагрузке</p>
+						<p>id = id по которому искать скрипт в автозагрузке в функции установленной в "nameFun</p>
+						<p>nameFun = Имя функции в которой искать скрипт по id (установленом в id) в автозагрузке.</p>
+						<p>Вернет true если скрипт с данным id присутствует в функции nameFun в противном случае false</p>
+						<p>Вернет имя функции, если функция присутствует в файле автозагрузки,в противном случае false</p>
+						<p>Ищет только то, что было установленно при помощи <a href="#SetStartupScript">"SetStartupScript"</a> </p>
+						<p>See: <a href="#SetStartupScript">SetStartupScript</a></p>
+                    </div>
 
 
 
+
+       
                     <!-- *** LUA_Lib *** LUA_Lib *** LUA_Lib *** LUA_Lib *** LUA_Lib *** -->
 
 
 
 
-
-
+                    
+                    <div id="LUA_Section"></div>
                     <br /><br /><br /><h3>Lua.</h3> <br /><br />
 
 
