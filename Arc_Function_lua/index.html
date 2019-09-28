@@ -50,6 +50,7 @@
                     <li><a href="#no_undo">no_undo</a></li>
                     <li><a href="#Action">Action</a></li>
                     <li><a href="#TrackFx_Rename">TrackFx_Rename</a></li>
+					<li><a href="#TrackFX_GetFXNameEx">TrackFX_GetFXNameEx</a></li>
                     <li><a href="#RemoveAllSendTr">RemoveAllSendTr</a></li>
                     <li><a href="#RemoveAllItemTr_Sel">RemoveAllItemTr_Sel</a></li>
                     <li><a href="#SelectAllTracks">SelectAllTracks</a></li>
@@ -222,7 +223,18 @@
                         <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
                         <br /><br />
                         <p>Переименовать Fx в треке.</p>
-                        <p> Вернет false если Fx отсутствует, в противном случае true.</p>
+                        <p>Вернет true если переименовал, в противном случае false.</p>
+                    </div>
+					
+					
+					<div class="right_function" id="TrackFX_GetFXNameEx">
+                        <code class="copy" id="TrackFX_GetFXNameEx_copy">
+                            <em>str </em><i>NameDefault,</i> <em>str </em><i>Name</i> = Arc.TrackFX_GetFXNameEx( <em>MediaTrack</em> <i>Track</i>, <em>idx</em> <i>idx_Fx</i>);
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Получить Имя эффекта на треке.</p>
+                        <p>Вернет Имя по умолчанию и Имя переименованное.</p>
                     </div>
 
 
