@@ -97,6 +97,10 @@
 					<li><a href="#SetHeightTrack_Env_TCP">SetHeightTrack_Env_TCP</a></li>
 					<li><a href="#SetStartupScript">SetStartupScript</a></li>
 		        	<li><a href="#GetStartupScript">GetStartupScript</a></li>
+					<li><a href="#DeleteEnvelopeRangeEx">DeleteEnvelopeRangeEx</a></li>
+					<li><a href="#Convert_Env_ValueInValueAndInPercent_SWS">Convert_Env_ValueInValueAndInPercent_SWS</a></li>
+					<li><a href="#CopyMove_EnvTr_PointsInRangeOfTime_SWS">CopyMove_EnvTr_PointsInRangeOfTime_SWS</a></li>
+					<li><a href="#CopyMoveItem_WithEnvelope_SWS">CopyMoveItem_WithEnvelope_SWS</a></li>
 					
 					<li></li>
                     <li><a href="#LUA_Section"> --- LUA --- </a></li>
@@ -202,6 +206,7 @@
                         <br><br>
                         <p>Что бы в ундо не прописывалось "ReaScript:Run" </p>
                         <p> if not --[[???]] then Arc.no_undo(); return end;</p>
+						<p>_</p>
                     </div>
 
 
@@ -213,6 +218,7 @@
                         <br /><br />
                         <p>Выполняет стандартные действие, id вписать через запятую для запуска нескольких действий;</p>
                         <p>Arc.Action(id,id,id,id);</p>
+						<p>_</p>
                     </div>
 
 
@@ -224,6 +230,7 @@
                         <br /><br />
                         <p>Переименовать Fx в треке.</p>
                         <p>Вернет true если переименовал, в противном случае false.</p>
+						<p>_</p>
                     </div>
 					
 					
@@ -235,6 +242,7 @@
                         <br /><br />
                         <p>Получить Имя эффекта на треке.</p>
                         <p>Вернет Имя по умолчанию и Имя переименованное.</p>
+						<p>_</p>
                     </div>
 
 
@@ -247,6 +255,7 @@
                         <p>Удалить все посылы в треке send / receive / hardware,  </p>
                         <p> Вернёт true если удаление произошло</p>
                         <p> Категория(category): &lt; 0 для receives, 0 = sends, > 0 для аппаратных выходов.</p>
+						<p>_</p>
                     </div>
 
 
@@ -259,6 +268,7 @@
                         <p>Удалить все / выделенные / невыделенные элементы в треке </p>
                         <p> rem_Idx = 0 Удалить все невыделенные, = 1 удалить все выделенные, = 2 удалить все;</p>
                         <p>Вернёт true если удаление произошло</p>
+						<p>_</p>
                     </div>
 
 
@@ -269,6 +279,7 @@
                         <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
                         <br /><br />
                         <p>Выделить Все Дорожки; Снять выделение со Всех Дорожек. (numb = 0 / 1) </p>
+						<p>_</p>
                     </div>
 
 
@@ -280,7 +291,8 @@
                         <br /><br />
                         <p>Сохранить "Выделение, Соло, Mute" Состояние Всех Дорожек в слот "n".</p>
                         <p>Востановить с помощью: <a href="#RestoreSoloMuteSelStateAllTracksGuidSlot_SWS">RestoreSoloMuteSelStateAllTracksGuidSlot_SWS</a></p>
-                    </div>
+                        <p>_</p>
+					</div>
 
 
                     <div class="right_function" id="RestoreSoloMuteSelStateAllTracksGuidSlot_SWS">
@@ -292,7 +304,8 @@
                         <p>Востановить "Выделение, Соло, Mute" Состояние Всех Дорожек из слота "n". </p>
                         <p>clean = true или 1 - чтобы зачистить сохраненный кэш.</p>
                         <p>Сохранить с помощью: <a href="#SaveSoloMuteSelStateAllTracksGuidSlot_SWS">SaveSoloMuteSelStateAllTracksGuidSlot_SWS</a></p>
-                    </div>
+                        <p>_</p>
+					</div>
 
 
                     <div class="right_function" id="js_ReaScriptAPI">
@@ -305,6 +318,7 @@
                         <p>Если установлено вернет true, в противном случае false и предупреждения. И версию вернет.</p>
                         <p>warning message: true - показать окно с предупреждением, false - не показать окно с предупреждением.</p>
 						<p>JS_API_Version - Установить версию, ниже которой будет ошибка. ПО умолчанию 0 </p>
+						<p>_</p>
                     </div>
 
 
@@ -317,7 +331,8 @@
                         <p>Проверяет, Установлено ли расширение 'SWS'. </p>
                         <p>Если установлено вернет true, в противном случае false и предупреждения.</p>
                         <p>warning message: true - показать окно с предупреждением, false - не показать окно с предупреждением.</p>
-                    </div>
+                        <p>_</p>
+					</div>
 
 
                     <div class="right_function" id="SetCollapseFolderMCP">
@@ -329,6 +344,7 @@
                         <p>Collapsed / Uncollapsed Track MCP (Свернуть / Развернуть Трек в Mикшере) </p>
                         <p> clickable: 0 скрыть кликабельный значок для папок, 1 показать кликабельный значок для папок, иначе -1;</p>
                         <p>is_show: 1 - скрыть, 0 показать:</p>
+						<p>_</p>
                     </div>
 
 
@@ -341,6 +357,7 @@
                         <p>Получить путь и имя исходного медиафайла у тейка </p>
                         <p>В отличии от "reaper.GetMediaSourceFileName(source,filenamebuf)" не ломается на реверсных файлах и видит .png</p>
                         <p>Если тейк содержит миди, то вернет false</p>
+						<p>_</p>
                     </div>
 
 
@@ -353,6 +370,7 @@
                         <p>Установить переключатель вкл выкл (подсветка кнопки); </p>
                         <p>onOff:  0 выкл, 1 вкл. По умолчанию 0 </p>
 						<p>Set:  true = Set; false = Get </p>
+						<p>_</p>
                     </div>
 
 
@@ -366,6 +384,7 @@
                         <p>buf: хоть что - обычно "Arc_Function_lua" для навигации по ini;</p>
                         <p>reset = true только для сброса, а так всегда false;</p>
                         <p>return: ok 1; cancel 0; otherwise -1</p>
+						<p>_</p>
                     </div>
 
 
@@ -384,6 +403,7 @@
                         </p>
 						<p>header = string - "Заголовок" или "".</p>
 						<p>Вернет всегда имя скрипта.</p>
+						<p>_</p>
                     </div>
 
 
@@ -394,6 +414,7 @@
                         <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
                         <br /><br />
                         <p>Удалить элемент мультимедиа </p>
+						<p>_</p>
                     </div>
 
 
@@ -412,6 +433,7 @@
                         <p> FeelVolumeOfTake: false - не реагировать на громкость тейка, true - реагировать на громкость тейка.</p>
                         <p>FeelVolumeOfEnvelopeItem: false - не реагировать на автоматизацию громкости элемента, true - реагировать на
                             автоматизацию громкости элемента.</p>
+					    <p>_</p>
                     </div>
 
 
@@ -422,7 +444,8 @@
                         <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
                         <br /><br />
                         <p>Удлинить / укоротить Медиа Элемент Слева</p>
-                    </div>
+                        <p>_</p>
+					</div>
 
 
                     <div class="right_function" id="Save_Selected_Items_GuidSlot_SWS">
@@ -433,7 +456,8 @@
                         <br /><br />
                         <p>Сохранить Выделенные элементы в слот "n"</p>
                         <p>Востановить с помощью: <a href="#Restore_Selected_Items_GuidSlot_SWS">Restore_Selected_Items_GuidSlot_SWS</a></p>
-                    </div>
+                        <p>_</p>
+					</div>
 
 
                     <div class="right_function" id="Restore_Selected_Items_GuidSlot_SWS">
@@ -445,7 +469,8 @@
                         <p>Восстановить Выделенные элементы из слота "n"</p>
                         <p>clean = true или 1 - чтобы зачистить сохраненный кэш.</p>
                         <p>Сохранить с помощью: <a href="#Save_Selected_Items_GuidSlot_SWS">Save_Selected_Items_GuidSlot_SWS</a></p>
-                    </div>
+                        <p>_</p>
+					</div>
 
 
                     <div class="right_function" id="SaveSoloMuteStateAllTracksGuidSlot_SWS">
@@ -456,7 +481,8 @@
                         <br /><br />
                         <p>Сохранить Соло Mute Состояние Всех Дорожек в слот "n"</p>
                         <p>Востановить с помощью: <a href="#RestoreSoloMuteStateAllTracksGuidSlot_SWS">RestoreSoloMuteStateAllTracksGuidSlot_SWS</a></p>
-                    </div>
+                        <p>_</p>
+					</div>
 
 
                     <div class="right_function" id="RestoreSoloMuteStateAllTracksGuidSlot_SWS">
@@ -468,7 +494,8 @@
                         <p>Восстановить Соло Mute Состояние Всех Дорожек из слота "n"</p>
                         <p>clean = true или 1 - чтобы зачистить сохраненный кэш</p>
                         <p>Сохранить с помощью:<a href="#SaveSoloMuteStateAllTracksGuidSlot_SWS">SaveSoloMuteStateAllTracksGuidSlot_SWS</a></p>
-                    </div>
+                        <p>_</p>
+					</div>
 
 
                     <div class="right_function" id="SaveMuteStateAllItemsGuidSlot_SWS">
@@ -479,7 +506,8 @@
                         <br /><br />
                         <p>Сохранить Mute Состояние Всех Дорожек в слот "n"</p>
                         <p>Востановить с помощью: <a href="#RestoreMuteStateAllItemsGuidSlot_SWS">RestoreMuteStateAllItemsGuidSlot_SWS</a></p>
-                    </div>
+                        <p>_</p>
+					</div>
 
 
                     <div class="right_function" id="RestoreMuteStateAllItemsGuidSlot_SWS">
@@ -491,7 +519,8 @@
                         <p>Восстановить Mute Состояние Всех Дорожек из слота "n"</p>
                         <p>clean = true или 1 - чтобы зачистить сохраненный кэш.</p>
                         <p>Сохранить с помощью: <a href="#SaveMuteStateAllItemsGuidSlot_SWS">SaveMuteStateAllItemsGuidSlot_SWS</a></p>
-                    </div>
+                        <p>_</p>
+					</div>
 
 
                     <div class="right_function" id="GetPositionOfFirstItemAndEndOfLast">
@@ -501,7 +530,8 @@
                         <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
                         <br /><br />
                         <p>Получить Позицию Первого Элемента И Конец Последнего Элемента.</p>
-                    </div>
+                        <p>_</p>
+					</div>
 
 
                     <div class="right_function" id="GetPositionOfFirstSelectedItemAndEndOfLast">
@@ -511,7 +541,8 @@
                         <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
                         <br /><br />
                         <p>Получить Позицию Первого Выделенного Элемента И Конец Последнего Выделенного Элемента.</p>
-                    </div>
+                        <p>_</p>
+					</div>
 
 
                     <div class="right_function" id="RemoveStretchMarkersSavingTreatedWave_Render_SWS">
@@ -521,7 +552,8 @@
                         <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
                         <br /><br />
                         <p>Удалить Маркеры Растяжки, Сохраняя Обработанную Волну, Удаление происходит при помощи рендера и это может замедлять процесс (Render) </p>
-                    </div>
+                        <p>_</p>
+					</div>
 
 
                     <div class="right_function" id="SaveSelTracksGuidSlot_SWS">
@@ -532,7 +564,8 @@
                         <br /><br />
                         <p>Сохранить Выделенные треки в слот "n".</p>
                         <p>Востановить с помощью: <a href="#RestoreSelTracksGuidSlot_SWS">RestoreSelTracksGuidSlot_SWS</a></p>
-                    </div>
+                        <p>_</p>
+					</div>
 
 
                     <div class="right_function" id="RestoreSelTracksGuidSlot_SWS">
@@ -544,6 +577,7 @@
                         <p>Восстановить Выделенные треки из слота "n".</p>
                         <p>clean = true или 1 - чтобы зачистить сохраненный кэш.</p>
                         <p>Сохранить с помощью: <a href="#SaveSelTracksGuidSlot_SWS">SaveSelTracksGuidSlot_SWS</a></p>
+						<p>_</p>
                     </div>
 
 
@@ -554,6 +588,7 @@
                         <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
                         <br /><br />
                         <p>Получить предотвращение спектральных пиков в треке </p>
+						<p>_</p>
                     </div>
 
 
@@ -564,7 +599,8 @@
                         <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
                         <br /><br />
                         <p>Установить предотвращение спектральных пиков в треке. Perf = true - Вкл. Perf = false - Выкл </p>
-                    </div>
+                        <p>_</p>
+					</div>
 
 
                     <div class="right_function" id="CloseAllFxInAllItemsAndAllTake">
@@ -576,6 +612,7 @@
                         <p>Закрыть Все Fx Во Всех Элементах И Во всех тейках. </p>
                         <p> chain: true - закрыть только fx из списка, false не закрывать.</p>
                         <p> float: true - закрыть только fx плавающие, false не закрывать.</p>
+						<p>_</p>
                     </div>
 
 
@@ -586,6 +623,7 @@
                         <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
                         <br /><br />
                         <p>Показать Скрыть дорожку в микшере (MCP). Setshow_hide: 0 или 1</p>
+						<p>_</p>
                     </div>
 
 
@@ -598,6 +636,7 @@
                         <p>Закрыть Все Fx На Всех Дорожках. </p>
                         <p> chain: true - закрыть только fx из списка, false не закрывать из списка.</p>
                         <p> float: true - закрыть только fx плавающие, false не закрывать плавающие.</p>
+						<p>_</p>
                     </div>
 
 
@@ -609,6 +648,7 @@
                         <br /><br />
                         <p>Закрыть Панель Инструментов По Номеру. Несовместимо с верхним докером (top).</p>
                         <p>ToolbarNumber: 1-16</p>
+						<p>_</p>
                     </div>
 
 
@@ -622,7 +662,8 @@
                         <p>parmname:</p>
                         <p> D_END : Конечная позиция элемента от старта проекта в секундах.</p>
                         <p>Так же <a href="https://www.extremraym.com/cloud/reascript-doc/#GetMediaItemInfo_Value" target="_blank">СМ.</a> другие атрибуты.</p>
-                    </div>
+                        <p>_</p>
+					</div>
 
 
                     <div class="right_function" id="SetMediaItemInfo_Value">
@@ -635,7 +676,8 @@
                         <p>parmname:</p>
                         <p> D_END : Конечная позиция элемента от старта проекта в секундах.</p>
                         <p> Так же <a href="https://www.extremraym.com/cloud/reascript-doc/#SetMediaItemInfo_Value" target="_blank">СМ.</a> другие атрибуты.</p>
-                    </div>
+                        <p>_</p>
+					</div>
 
 
                     <div class="right_function" id="Get_Format_ProjectGrid">
@@ -645,7 +687,8 @@
                         <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
                         <br /><br />
                         <p>Форматирует значение сетки проекта в удобочитаемую форму <a href="https://www.extremraym.com/cloud/reascript-doc/#GetSetProjectGrid" target="_blank">СМ.</a></p>
-                    </div>
+                        <p>_</p>
+					</div>
 
 
                     <div class="right_function" id="CountTrackSelectedMediaItems">
@@ -655,6 +698,7 @@
                         <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
                         <br /><br />
                         <p>Количество в треке Выбранных Элементов. </p>
+						<p>_</p>
                     </div>
 
 
@@ -665,6 +709,7 @@
                         <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
                         <br /><br />
                         <p>Получить в треке Выбранный Элемент. </p>
+						<p>_</p>
                     </div>
 
 
@@ -677,6 +722,7 @@
                         <p>Set 0: Вернет высоту трека от 0 до 1;  0 самый высокий, 1 самый маленький.</p>
 						<p>numbHeigth: от 0 до 1;  0 самый высокий, 1 самый маленький.</p>
 						<p>Set: 1 Set, 0 Get.</p>
+						<p>_</p>
                     </div>
 
 
@@ -689,6 +735,7 @@
                         <br /><br />
                         <p>Открыть файл или url</p>
 						<p>pathUrl = путь/файл или url</p>
+						<p>_</p>
                     </div>
 
 
@@ -706,6 +753,7 @@
 						<p></p>
 						<p></p>
 						<p>В случае неудачи вернет -1</p>
+						<p>_</p>
                     </div>
 
 
@@ -718,6 +766,7 @@
                         <br /><br />
                         <p>Получить имя скрипта или кастом экшена по ID</p>
 						<p>В случае неудачи вернет -1</p>
+						<p>_</p>
                     </div>
 
 
@@ -730,6 +779,7 @@
                         <br /><br />
                         <p>Получить значение автозаписи on/off</p>
 						<p>Вернет 1 если включена и 0 если выключена</p>
+						<p>_</p>
                     </div>
 
 
@@ -741,6 +791,7 @@
                         <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
                         <br /><br />
                         <p>Установите автозапись на треке / 0-1 / true-false;</p>
+						<p>_</p>
                     </div>
 					
 					
@@ -771,6 +822,7 @@
 								Вот она погрешность в 5 пикселей
                             </small>
                         </div>
+						<p>_</p>
                     </div>
 					
 					
@@ -803,6 +855,7 @@
 							</small>
 						</div>
 						<p>See: <a href="#GetStartupScript">GetStartupScript</a></p>
+						<p>_</p>
 					</div>
 					
 					
@@ -820,10 +873,98 @@
 						<p>Вернет имя функции, если функция присутствует в файле автозагрузки,в противном случае false</p>
 						<p>Ищет только то, что было установленно при помощи <a href="#SetStartupScript">"SetStartupScript"</a> </p>
 						<p>See: <a href="#SetStartupScript">SetStartupScript</a></p>
+						<p>_</p>
                     </div>
 
 
 
+				    <div class="right_function" id="DeleteEnvelopeRangeEx">
+                        <code class="copy" id="DeleteEnvelopeRangeEx_copy">
+                            Arc.DeleteEnvelopeRangeEx(<em> envelopeTrack </em><i>env,</i><em> string </em><i>time1,</i><em> string </em><i>time2,</i><em> boolean </em><i>Undo</i>);
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Удалить Диапазон Огибающей</p>
+						<p>time1,time2 = Удалить от time1 до time2</p>
+						<p>Undo: false отключить undo, true обернуть в undo блок.</p>
+						<p>_</p>
+                    </div>
+					
+					
+					
+				    <div class="right_function" id="Convert_Env_ValueInValueAndInPercent_SWS">
+                        <code class="copy" id="Convert_Env_ValueInValueAndInPercent_SWS_copy">
+                            <em>numb </em><i>valPoint</i> = Arc.Convert_Env_ValueInValueAndInPercent_SWS(<em> envelopeTrack </em><i>env,</i><em> numb </em><i>valPoint,</i><em> numb </em><i>PerVal</i>);
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Конвертировать значения конверта в проценты из значения и в значение из процентов.</p>
+						<p>Обратить внимания, что масштабирование огибающей должно быть отключено.(fade scaling) или сконвер.Смотреть 
+						    <a href="https://www.extremraym.com/cloud/reascript-doc/?cprotect=2#ScaleFromEnvelopeMode">ScaleFromEnvelopeMode</a> , 
+							<a href="https://www.extremraym.com/cloud/reascript-doc/?cprotect=2#ScaleToEnvelopeMode">ScaleToEnvelopeMode</a></p>
+						<p>valPoint: = Значение огибающей в зависимости от PerVal</p>
+						<p>PerVal: = 0 из значения в процент; =1 из процента в значения.</p>
+						<p>Эффективно для перемещения точек на другую огибающую</p>
+						<p>_</p>
+                    </div>
+					
+					
+					
+				    <div class="right_function" id="CopyMove_EnvTr_PointsInRangeOfTime_SWS">
+                        <code class="copy" id="CopyMove_EnvTr_PointsInRangeOfTime_SWS_copy">
+                            <em>boolean =</em><i></i> Arc.CopyMove_EnvTr_PointsInRangeOfTime_SWS(<em>envelopeTrack </em><i>env,</i><em> envelopeTrack </em><i>newEnv,</i><em> numb </em><i>time1,</i><em> numb </em><i>time2,</i><em> numb </em><i>timeNew,</i><em> boolean </em><i>Move,</i><em> boolean </em><i>Undo</i>);
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Копировать / Переместить Диапазон Конверта(track) По Времени в конверте или с конверта на конверт.</p>
+						<p>env: Конверт с которого переместить.</p>
+						<p>newEnv: Конверт на который переместить  / ENV и ENV_NEW может быть один конверт.</p>
+						<p>time1 / time2 - Диапазон конверта от time1 до time2 который нужно переместить.</p>
+						<p>timeNew1 - Время, куда нужно переместить.</p>
+						<p>Move: true переместить / false скопировать.</p>
+						<p>Undo: false отключить undo, true обернуть в undo блок.</p>
+						<p>Маштабирование огибающей учтено (Scaling Mode)</p>
+						<p>При успехе вернет true в противном случае false</p>
+						<p>SWS из-за "Convert_Env_ValueInValueAndInPercent_SWS"</p>
+						<p>_</p>
+                    </div>
+
+
+
+
+				    <div class="right_function" id="CopyMoveItem_WithEnvelope_SWS">
+                        <code class="copy" id="CopyMoveItem_WithEnvelope_SWS_copy">
+                            Arc.CopyMoveItem_WithEnvelope_SWS(<em> Media Item </em><i>item,</i><em> Media Track </em><i>New_track,</i><em> numb </em><i>NewPosition,</i><em> boolean </em><i>Move,</i><em> numb </em><i>EnvPointMove,</i><em> numb </em><i>noAct,</i><em> numb </em><i>newAct,</i><em> numb </em><i>newVis,</i><em> boolean </em><i>Undo</i>);
+						</code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Copy Move Item With Envelope</p>
+						<p>Item: Элемент который нужно переместить.</p>
+						<p>New_track: на какой трек переместить (трек может быть тот же на котором элемент)</p>
+						<p>NewPosition: < 0 взять позицию перемещаемого элемента, иначе установить позицию в сек.</p>
+						<p>Move: 1 переместить, 0 копировать</p>
+						<p>EnvPointMove: < 0 копировать / переместить без автоматизации</p>
+						<p>EnvPointMove: = 0 копировать / переместить с автоматизацией</p>
+				        <p>EnvPointMove: = 1 или = true копировать / переместить взависимости от (Options: Envelope points move with media items 40070)</p>
+						<p>noAct: = 0 Не копировать неактивную (bypass) автоматизацию</p>
+						<p>noAct: = 1 копировать неактивную (bypass) автоматизацию</p>
+						<p>newAct: = 0 Не снимать bypass на новом треке автоматизации, если он  установлен в bypass-е</p>
+						<p>newAct: = 1 Снять bypass на новом треке автоматизации,(сделать автоматизацию активной), если она в bypass-е</p>
+						<p>newVis: = 0 Не делать автоматизацию видимой, если она скрыта.</p>
+						<p>newVis: = 1 Сделать автоматизацию видимой, если она скрыта</p>
+						<p></p>
+						<p>Undo: false отключить undo, true обернуть в undo блок.</p>
+						<p>При успехе вернет true в противном случае false</p>
+						<p>Маштабирование огибающей учтено (Scaling Mode)</p>
+						<p>SWS из-за "Convert_Env_ValueInValueAndInPercent_SWS"</p>
+						<p>_</p>
+                    </div>
+
+
+
+
+					
+					
 
        
                     <!-- *** LUA_Lib *** LUA_Lib *** LUA_Lib *** LUA_Lib *** LUA_Lib *** -->
