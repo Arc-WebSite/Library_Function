@@ -101,6 +101,7 @@
 					<li><a href="#Convert_Env_ValueInValueAndInPercent_SWS">Convert_Env_ValueInValueAndInPercent_SWS</a></li>
 					<li><a href="#CopyMove_EnvTr_PointsInRangeOfTime_SWS">CopyMove_EnvTr_PointsInRangeOfTime_SWS</a></li>
 					<li><a href="#CopyMoveItem_WithEnvelope_SWS">CopyMoveItem_WithEnvelope_SWS</a></li>
+					<li><a href="#ClearEnvelopeInTimeInterval">ClearEnvelopeInTimeInterval</a></li>
 					
 					<li></li>
                     <li><a href="#LUA_Section"> --- LUA --- </a></li>
@@ -938,7 +939,7 @@
 						</code>
                         <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
                         <br /><br />
-                        <p>Copy Move Item With Envelope</p>
+                        <p>Копировать Переместить Элемент С Конвертом</p>
 						<p>Item: Элемент который нужно переместить.</p>
 						<p>New_track: на какой трек переместить (трек может быть тот же на котором элемент)</p>
 						<p>NewPosition: < 0 взять позицию перемещаемого элемента, иначе установить позицию в сек.</p>
@@ -957,6 +958,22 @@
 						<p>При успехе вернет true в противном случае false</p>
 						<p>Маштабирование огибающей учтено (Scaling Mode)</p>
 						<p>SWS из-за "Convert_Env_ValueInValueAndInPercent_SWS"</p>
+						<p>_</p>
+                    </div>
+					
+					
+					
+					<div class="right_function" id="ClearEnvelopeInTimeInterval">
+                        <code class="copy" id="ClearEnvelopeInTimeInterval_copy">
+                            Arc.ClearEnvelopeInTimeInterval(<em> envelope Track </em><i>env,</i><em> numb </em><i>time1,</i><em> numb </em><i>time2,</i><em> numb </em><i>interval</i>);
+						</code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Очистить (разрядить) Огибающую В Интервале Времени</p>
+						<p>env envelope Track</p>
+						<p>time1, time2: Интервал с какого по какое время чистить огибающую.</p>
+						<p>interval: интервал между 1 и 3 точкой, если время между 1 и 3 точкой меньше interval, то удалить точку 2. 
+						See <a href="https://avatars.mds.yandex.net/get-pdb/1936330/4f976537-e217-4618-8e23-486a0fa0f4ca/s1200">"скрин"</a></p>
 						<p>_</p>
                     </div>
 
