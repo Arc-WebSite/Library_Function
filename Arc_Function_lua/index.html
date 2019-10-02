@@ -97,11 +97,7 @@
 					<li><a href="#SetHeightTrack_Env_TCP">SetHeightTrack_Env_TCP</a></li>
 					<li><a href="#SetStartupScript">SetStartupScript</a></li>
 		        	<li><a href="#GetStartupScript">GetStartupScript</a></li>
-					<li><a href="#DeleteEnvelopeRangeEx">DeleteEnvelopeRangeEx</a></li>
-					<li><a href="#Convert_Env_ValueInValueAndInPercent_SWS">Convert_Env_ValueInValueAndInPercent_SWS</a></li>
-					<li><a href="#CopyMove_EnvTr_PointsInRangeOfTime_SWS">CopyMove_EnvTr_PointsInRangeOfTime_SWS</a></li>
-					<li><a href="#CopyMoveItem_WithEnvelope_SWS">CopyMoveItem_WithEnvelope_SWS</a></li>
-					<li><a href="#ClearEnvelopeInTimeInterval">ClearEnvelopeInTimeInterval</a></li>
+					
 					
 					<li></li>
                     <li><a href="#LUA_Section"> --- LUA --- </a></li>
@@ -877,105 +873,6 @@
 						<p>_</p>
                     </div>
 
-
-
-				    <div class="right_function" id="DeleteEnvelopeRangeEx">
-                        <code class="copy" id="DeleteEnvelopeRangeEx_copy">
-                            Arc.DeleteEnvelopeRangeEx(<em> envelopeTrack </em><i>env,</i><em> string </em><i>time1,</i><em> string </em><i>time2,</i><em> boolean </em><i>Undo</i>);
-                        </code>
-                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
-                        <br /><br />
-                        <p>Удалить Диапазон Огибающей</p>
-						<p>time1,time2 = Удалить от time1 до time2</p>
-						<p>Undo: false отключить undo, true обернуть в undo блок.</p>
-						<p>_</p>
-                    </div>
-					
-					
-					
-				    <div class="right_function" id="Convert_Env_ValueInValueAndInPercent_SWS">
-                        <code class="copy" id="Convert_Env_ValueInValueAndInPercent_SWS_copy">
-                            <em>numb </em><i>valPoint</i> = Arc.Convert_Env_ValueInValueAndInPercent_SWS(<em> envelopeTrack </em><i>env,</i><em> numb </em><i>valPoint,</i><em> numb </em><i>PerVal</i>);
-                        </code>
-                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
-                        <br /><br />
-                        <p>Конвертировать значения конверта в проценты из значения и в значение из процентов.</p>
-						<p>Обратить внимания, что масштабирование огибающей должно быть отключено.(fade scaling) или сконвер.Смотреть 
-						    <a href="https://www.extremraym.com/cloud/reascript-doc/?cprotect=2#ScaleFromEnvelopeMode">ScaleFromEnvelopeMode</a> , 
-							<a href="https://www.extremraym.com/cloud/reascript-doc/?cprotect=2#ScaleToEnvelopeMode">ScaleToEnvelopeMode</a></p>
-						<p>valPoint: = Значение огибающей в зависимости от PerVal</p>
-						<p>PerVal: = 0 из значения в процент; =1 из процента в значения.</p>
-						<p>Эффективно для перемещения точек на другую огибающую</p>
-						<p>_</p>
-                    </div>
-					
-					
-					
-				    <div class="right_function" id="CopyMove_EnvTr_PointsInRangeOfTime_SWS">
-                        <code class="copy" id="CopyMove_EnvTr_PointsInRangeOfTime_SWS_copy">
-                            <em>boolean =</em><i></i> Arc.CopyMove_EnvTr_PointsInRangeOfTime_SWS(<em>envelopeTrack </em><i>env,</i><em> envelopeTrack </em><i>newEnv,</i><em> numb </em><i>time1,</i><em> numb </em><i>time2,</i><em> numb </em><i>timeNew,</i><em> boolean </em><i>Move,</i><em> boolean </em><i>Undo</i>);
-                        </code>
-                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
-                        <br /><br />
-                        <p>Копировать / Переместить Диапазон Конверта(track) По Времени в конверте или с конверта на конверт.</p>
-						<p>env: Конверт с которого переместить.</p>
-						<p>newEnv: Конверт на который переместить  / ENV и ENV_NEW может быть один конверт.</p>
-						<p>time1 / time2 - Диапазон конверта от time1 до time2 который нужно переместить.</p>
-						<p>timeNew1 - Время, куда нужно переместить.</p>
-						<p>Move: true переместить / false скопировать.</p>
-						<p>Undo: false отключить undo, true обернуть в undo блок.</p>
-						<p>Маштабирование огибающей учтено (Scaling Mode)</p>
-						<p>При успехе вернет true в противном случае false</p>
-						<p>SWS из-за "Convert_Env_ValueInValueAndInPercent_SWS"</p>
-						<p>_</p>
-                    </div>
-
-
-
-
-				    <div class="right_function" id="CopyMoveItem_WithEnvelope_SWS">
-                        <code class="copy" id="CopyMoveItem_WithEnvelope_SWS_copy">
-                            Arc.CopyMoveItem_WithEnvelope_SWS(<em> Media Item </em><i>item,</i><em> Media Track </em><i>New_track,</i><em> numb </em><i>NewPosition,</i><em> boolean </em><i>Move,</i><em> numb </em><i>EnvPointMove,</i><em> numb </em><i>noAct,</i><em> numb </em><i>newAct,</i><em> numb </em><i>newVis,</i><em> boolean </em><i>Undo</i>);
-						</code>
-                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
-                        <br /><br />
-                        <p>Копировать Переместить Элемент С Конвертом</p>
-						<p>Item: Элемент который нужно переместить.</p>
-						<p>New_track: на какой трек переместить (трек может быть тот же на котором элемент)</p>
-						<p>NewPosition: < 0 взять позицию перемещаемого элемента, иначе установить позицию в сек.</p>
-						<p>Move: 1 переместить, 0 копировать</p>
-						<p>EnvPointMove: < 0 копировать / переместить без автоматизации</p>
-						<p>EnvPointMove: = 0 копировать / переместить с автоматизацией</p>
-				        <p>EnvPointMove: = 1 копировать / переместить взависимости от (Options: Envelope points move with media items 40070)</p>
-						<p>noAct: = 0 Не копировать неактивную (bypass) автоматизацию</p>
-						<p>noAct: = 1 копировать неактивную (bypass) автоматизацию</p>
-						<p>newAct: = 0 Не снимать bypass на новом треке автоматизации, если он  установлен в bypass-е</p>
-						<p>newAct: = 1 Снять bypass на новом треке автоматизации,(сделать автоматизацию активной), если она в bypass-е</p>
-						<p>newVis: = 0 Не делать автоматизацию видимой, если она скрыта.</p>
-						<p>newVis: = 1 Сделать автоматизацию видимой, если она скрыта</p>
-						<p></p>
-						<p>Undo: false отключить undo, true обернуть в undo блок.</p>
-						<p>При успехе вернет true в противном случае false</p>
-						<p>Маштабирование огибающей учтено (Scaling Mode)</p>
-						<p>SWS из-за "Convert_Env_ValueInValueAndInPercent_SWS"</p>
-						<p>_</p>
-                    </div>
-					
-					
-					
-					<div class="right_function" id="ClearEnvelopeInTimeInterval">
-                        <code class="copy" id="ClearEnvelopeInTimeInterval_copy">
-                            Arc.ClearEnvelopeInTimeInterval(<em> envelope Track </em><i>env,</i><em> numb </em><i>time1,</i><em> numb </em><i>time2,</i><em> numb </em><i>interval</i>);
-						</code>
-                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
-                        <br /><br />
-                        <p>Очистить (разрядить) Огибающую В Интервале Времени</p>
-						<p>env envelope Track</p>
-						<p>time1, time2: Интервал с какого по какое время чистить огибающую.</p>
-						<p>interval: интервал между 1 и 3 точкой, если время между 1 и 3 точкой меньше interval, то удалить точку 2. 
-						See <a href="https://avatars.mds.yandex.net/get-pdb/1936330/4f976537-e217-4618-8e23-486a0fa0f4ca/s1200">"скрин"</a></p>
-						<p>_</p>
-                    </div>
 
 
 
