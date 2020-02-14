@@ -97,6 +97,7 @@
 					<li><a href="#SetHeightTrack_Env_TCP">SetHeightTrack_Env_TCP</a></li>
 					<li><a href="#SetStartupScript">SetStartupScript</a></li>
 		        	<li><a href="#GetStartupScript">GetStartupScript</a></li>
+					<li><a href="#GetSetTerminateAllInstancesOrStartNewOneKB_ini">GetSetTerminateAllInstancesOrStartNewOneKB_ini</a></li>
 					
 					
 					<li></li>
@@ -875,6 +876,39 @@
 
 
 
+
+
+                    <div class="right_function" id="GetSetTerminateAllInstancesOrStartNewOneKB_ini">
+                        <code class="copy" id="GetSetTerminateAllInstancesOrStartNewOneKB_ini_copy">
+                            <em>boolean </em><i>ret,</i>  <em>numb </em><i>val</i>  = Arc.Arc_Module.GetSetTerminateAllInstancesOrStartNewOneKB_ini(<em>numb </em><i>set,</i><em>numb </em><i>newState,</i><em>string </em><i>ScrPath,</i><em>string </em><i>ScrName</i>);
+						</code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Установите/получить - завершить все экземпляры или начать новый KB_ini</p>
+			            <p>set = 0 / false</p>
+						<p>Если нашел запись скрипта в файле, то вернет (true,state)</p>
+						<p>Если не нашел запись скрипта в файле то вернет (false)</p>
+						<p></p>
+						<p>set = 1 / true</p>
+						<p>Если не нашел запись скрипта в файле то вернет (false)</p>
+					    <p>Если нашел запись скрипта в файле, и значения равны с newState, то вернет (false,state), перезапись не будет производиться,сработает как get/</p>
+						<p>Если нашел запись скрипта в файле, и значения не равны с newState, то перепишет новое значения и вернет старое значение,true.</p>
+						<p></p>
+			            <div class="div_Example">
+							<small>
+						        ScrName = "Archie_Edit cursor;  MMM.lua"<br />
+								ScrPath = 'C:/Users/Archie/Desktop/Reaper-Vremenno/Scripts/Archie-ReaScripts/MAIN/Edit cursor'<br />
+								reaper.defer(function() GetSetTerminateAllInstancesOrStartNewOneKB_ini(1,516,ScrPath,ScrName)end);<br />
+								GetSetTerminateAllInstancesOrStartNewOneKB_ini(1,516,ScrPath,ScrName)<br />
+								GetSetTerminateAllInstancesOrStartNewOneKB_ini(0,'',ScrPath,ScrName)<br />
+								GetSetTerminateAllInstancesOrStartNewOneKB_ini(0,nil,ScrPath,ScrName)<br />
+						    </small>
+                        </div>
+						<p>newState: 4=Reset; 260=Terminate; 516=New;</p>
+						<p></p>
+						<p>Требуется перезагрузка рипера</p>
+						<p>_</p>
+                    </div>
 
 
 					
