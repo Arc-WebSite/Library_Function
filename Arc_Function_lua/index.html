@@ -97,6 +97,7 @@
 					<li><a href="#SetHeightTrack_Env_TCP">SetHeightTrack_Env_TCP</a></li>
 					<li><a href="#SetStartupScript">SetStartupScript</a></li>
 		        	<li><a href="#GetStartupScript">GetStartupScript</a></li>
+					<li><a href="#EnumStartupScript">EnumStartupScript</a></li>
 					<li><a href="#GetSetTerminateAllInstancesOrStartNewOneKB_ini">GetSetTerminateAllInstancesOrStartNewOneKB_ini</a></li>
 					
 					
@@ -861,7 +862,7 @@
 					</div>
 					
 					
-                    
+			                    
 					<div class="right_function" id="GetStartupScript">
                         <code class="copy" id="GetStartupScript_copy">
                             <em>boolean </em><i>check_Id,</i> <em>boolean </em><i>check_Fun</i> = Arc.GetStartupScript(<em>string </em><i>id,</i><em>string </em><i>nameFun</i>);
@@ -877,6 +878,25 @@
 						<p>See: <a href="#SetStartupScript">SetStartupScript</a></p>
 						<p>_</p>
                     </div>
+					
+					
+					
+			        <div class="right_function" id="EnumStartupScript">
+                        <code class="copy" id="EnumStartupScript_copy">
+                              <em>boolean </em><i>retval,</i><em>string </em><i>nameAct,</i><em>string </em><i>id = </i>Arc.EnumStartupScript(<em>numb </em><i>idx,</i><em>string </em><i>nameAction,</i>);
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+						<p>Перечислите данные, хранящиеся в автозапуске, для конкретного id /name. </p>
+						<p>Возвращает false, когда больше нет данных иначе true.</p>
+						<p>nameFun = Имя функции в которой искать скрипт по idx.</p>
+						<p>idx = индекс на основе нуля</p>
+                        <p></p>
+						<br />
+						<p>See: <a href="#GetStartupScript">GetStartupScript</a></p>
+						<p>_</p>
+					</div>
+					
 
 
 
