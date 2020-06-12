@@ -898,15 +898,23 @@
 							<small>
 						        ScrName = "Archie_Edit cursor;  MMM.lua"<br />
 								ScrPath = 'C:/Users/Archie/Desktop/Reaper-Vremenno/Scripts/Archie-ReaScripts/MAIN/Edit cursor'<br />
-								reaper.defer(function() GetSetTerminateAllInstancesOrStartNewOneKB_ini(1,516,ScrPath,ScrName)end);<br />
-								GetSetTerminateAllInstancesOrStartNewOneKB_ini(1,516,ScrPath,ScrName)<br />
-								GetSetTerminateAllInstancesOrStartNewOneKB_ini(0,'',ScrPath,ScrName)<br />
-								GetSetTerminateAllInstancesOrStartNewOneKB_ini(0,nil,ScrPath,ScrName)<br />
+								reaper.defer(function() Arc.GetSetTerminateAllInstancesOrStartNewOneKB_ini(1,516,ScrPath,ScrName)end);<br />
+								Arc.GetSetTerminateAllInstancesOrStartNewOneKB_ini(1,516,ScrPath,ScrName)<br />
+								Arc.GetSetTerminateAllInstancesOrStartNewOneKB_ini(0,'',ScrPath,ScrName)<br />
+								Arc.GetSetTerminateAllInstancesOrStartNewOneKB_ini(0,nil,ScrPath,ScrName)<br />
 						    </small>
                         </div>
 						<p>newState: 4=Reset; 260=Terminate; 516=New;</p>
 						<p></p>
 						<p>Требуется перезагрузка рипера</p>
+						<p></p>
+				        <div class="div_Example">
+							<small>
+						        reaper.defer(function();<br />
+								local ScrPath,ScrName = debug.getinfo(1,'S').source:match('^[@](.+)[/\\](.+)');<br />
+								Arc.GetSetTerminateAllInstancesOrStartNewOneKB_ini(1,516,ScrPath,ScrName)end);<br />
+						    </small>
+                        </div>
 						<p>_</p>
                     </div>
 
