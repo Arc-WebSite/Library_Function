@@ -97,8 +97,9 @@
 					<li><a href="#SetHeightTrack_Env_TCP">SetHeightTrack_Env_TCP</a></li>
 					<li><a href="#SetStartupScript">SetStartupScript</a></li>
 		        	<li><a href="#GetStartupScript">GetStartupScript</a></li>
+					<li><a href="#EnumStartupScript">EnumStartupScript</a></li>
 					<li><a href="#GetSetTerminateAllInstancesOrStartNewOneKB_ini">GetSetTerminateAllInstancesOrStartNewOneKB_ini</a></li>
-					
+					<li><a href="#ChangesInProject">ChangesInProject</a></li>
 					
 					<li></li>
                     <li><a href="#LUA_Section"> --- LUA --- </a></li>
@@ -111,6 +112,10 @@
                     <li><a href="#ValueFromMaxRepsIn_Table">ValueFromMaxRepsIn_Table</a></li>
                     <li><a href="#randomOfVal">randomOfVal</a></li>
                     <li><a href="#invert_number">invert_number</a></li>
+			        <li><a href="#iniFileWriteLua">iniFileWriteLua</a></li>
+					<li><a href="#iniFileReadLua">iniFileReadLua</a></li>
+					<li><a href="#iniFileRemoveSectionLua">iniFileRemoveSectionLua</a></li>
+					<li><a href="#iniFileEnumLua">iniFileEnumLua</a></li>
 
                     <!--***********************************-->
 
@@ -857,7 +862,7 @@
 					</div>
 					
 					
-                    
+			                    
 					<div class="right_function" id="GetStartupScript">
                         <code class="copy" id="GetStartupScript_copy">
                             <em>boolean </em><i>check_Id,</i> <em>boolean </em><i>check_Fun</i> = Arc.GetStartupScript(<em>string </em><i>id,</i><em>string </em><i>nameFun</i>);
@@ -866,13 +871,32 @@
                         <br /><br />
                         <p>Получить - установлен ли скрипт в автозагрузке</p>
 						<p>id = id по которому искать скрипт в автозагрузке в функции установленной в "nameFun</p>
-						<p>nameFun = Имя функции в которой искать скрипт по id (установленом в id) в автозагрузке.</p>
+						<p>nameFun = Имя функции в которой искать скрипт по id (установленом в id) в автозагрузке. *#8</p>
 						<p>Вернет true если скрипт с данным id присутствует в функции nameFun в противном случае false</p>
 						<p>Вернет имя функции, если функция присутствует в файле автозагрузки,в противном случае false</p>
 						<p>Ищет только то, что было установленно при помощи <a href="#SetStartupScript">"SetStartupScript"</a> </p>
 						<p>See: <a href="#SetStartupScript">SetStartupScript</a></p>
 						<p>_</p>
                     </div>
+					
+					
+					
+			        <div class="right_function" id="EnumStartupScript">
+                        <code class="copy" id="EnumStartupScript_copy">
+                              <em>boolean </em><i>retval,</i><em>string </em><i>nameAct,</i><em>string </em><i>id = </i>Arc.EnumStartupScript(<em>numb </em><i>idx,</i><em>string </em><i>nameAction</i>);
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+						<p>Перечислите данные, хранящиеся в автозапуске, для конкретного id /name. </p>
+						<p>Возвращает false, когда больше нет данных иначе true.</p>
+						<p>nameFun = Имя функции в которой искать скрипт по idx. *#8</p>
+						<p>idx = индекс на основе нуля</p>
+                        <p></p>
+						<br />
+						<p>See: <a href="#GetStartupScript">GetStartupScript</a></p>
+						<p>_</p>
+					</div>
+					
 
 
 
@@ -919,6 +943,18 @@
                     </div>
 
 
+
+                    <div class="right_function" id="ChangesInProject">
+                        <code class="copy" id="ChangesInProject_copy">
+                            <em>boolean </em><i>val = Arc.ChangesInProject(<em>string / number </em><i>buf</i>);
+						</code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+						<p>возвращает true при изменении состояния проекта</p>
+						<p>buf = Необязательный параметр, для использования функции в одном скрипте в </p>
+						<p>разных местах одновременно, buf  должен быть разный (defer)</p>
+						<p>_</p>
+                    </div>
 					
 					
 
@@ -1018,6 +1054,71 @@
 
 
 
+
+                    <div class="right_function" id="iniFileWriteLua">
+                        <code class="copy" id="iniFileWriteLua_copy">
+						           
+                            <em>boolean</em> Arc.iniFileWriteLua(<em>str</em><i>section,</i><em>str </em><i>key, </i><em>str </em><i>value, </i><em>str </em><i>iniFile, </i><em>boolean </em><i>lua, </i><em>boolean </em><i>clean</i>);
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p></p>
+						<p>boolean 'lua' Необязательный параметр</p>
+						<p>Если установлен,будет добавлять комментарий 'два тире', полезно для записи в луа файл.</p>
+						<p>boolean 'clean', true=Очистка пустых строк, Необязательный параметр.</p>
+						<p>вернет true если данные былы записанны в файл, иначе false (запись не производится, если это не не обходимо)</p>
+						<p>[section]key=value</p>
+                    </div>
+					
+					
+					
+                    <div class="right_function" id="iniFileReadLua">
+                        <code class="copy" id="iniFileReadLua_copy">
+						           
+                            <em>boolean</em> Arc.iniFileReadLua(<em>str </em><i>section, </i><em>str </em><i>key, </i><em>str </em><i>iniFile, </i><em>boolean </em><i>lua</i>);
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p></p>
+						<p>  boolean 'lua' - Смотреть function iniFileWrite, Необязательный параметр</p>
+						<p>  Вернет value или ''</p>
+                    </div>
+					
+					
+					
+					<div class="right_function" id="iniFileRemoveSectionLua">
+                        <code class="copy" id="iniFileRemoveSectionLua_copy">
+						           
+                            <em>boolean</em> Arc.iniFileRemoveSectionLua(<em>str </em><i>section, </i><em>str </em><i>iniFile, </i><em>boolean </em><i> lua</i>);
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p></p>
+						<p>Удалить всю секцию, со всеми ключами</p>
+						<p>boolean 'lua' - Смотреть function iniFileWrite, Необязательный параметр</p>
+						<p>вернет трие при успешном удалении, иначе false</p>
+                    </div>
+					
+					
+					
+			    	<div class="right_function" id="iniFileEnumLua">
+                        <code class="copy" id="iniFileEnumLua_copy">
+						                      
+                             <em>boolean </em><i>retval,</i><em>str </em><i>key,</i><em>str </em><i>val = </i>Arc.iniFileEnumLua(<em>str </em><i>section, </i><em>numb </em><i>idx, </i><em>str </em><i>iniFile, </i><em>boolean </em><i>lua</i>);
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p></p>
+						<p>Перечислите данные, хранящиеся в ini для конкретного имени 'section'</p>
+						<p>Возвращает false, когда больше нет данных</p>
+						<p>idx На основе нуля</p>
+						<p>boolean 'lua' - Смотреть function iniFileWrite, Необязательный параметр</p>
+						<p>retval, key, val = iniFileEnum(section,idx,iniFile,lua);</p>
+                    </div>
+					
+					
+					
+
                     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                     <em> Некопирует </em> <i>Копирует</i>  НЕ ЗАБУДЬ ПРО КАТЕГОРИЮ РИПЕР / ЛУА
                     <li><a href="#FUNCTION">FUNCTION</a></li> // ЛЕВАЯ ФУНКЦИЯ - ВВЕРХ //
@@ -1069,3 +1170,4 @@
 
 </body>
 </html>
+ 
