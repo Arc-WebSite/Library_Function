@@ -929,7 +929,7 @@
 								Arc.GetSetTerminateAllInstancesOrStartNewOneKB_ini(0,nil,ScrPath,ScrName)<br />
 						    </small>
                         </div>
-						<p>newState: 4=Reset; 260=Terminate; 516=New;</p>
+						<p>newState: 4=Reset; 260=TERMINATE INSTANCES; 516=NEW INSTANCES;</p>
 						<p></p>
 						<p>Требуется перезагрузка рипера</p>
 						<p></p>
@@ -938,7 +938,11 @@
 						        reaper.defer(function();<br />
 								local ScrPath,ScrName = debug.getinfo(1,'S').source:match('^[@](.+)[/\\](.+)');<br />
 								Arc.GetSetTerminateAllInstancesOrStartNewOneKB_ini(1,516,ScrPath,ScrName)end);<br />
-						    </small>
+								<p>------------------------</p>
+								reaper.defer(function();<br />
+								local ScrPath,ScrName = debug.getinfo(1,'S').source:match('^[@](.+)[/\\](.+)');<br />
+								Arc.GetSetTerminateAllInstancesOrStartNewOneKB_ini(1,260,ScrPath,ScrName)end);<br />
+							</small>
                         </div>
 						<p>_</p>
                     </div>
