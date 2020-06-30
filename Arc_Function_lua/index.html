@@ -66,8 +66,7 @@
                     <li><a href="#DeleteMediaItem">DeleteMediaItem</a></li>
                     <li><a href="#GetSampleNumberPosValue">GetSampleNumberPosValue</a></li>
                     <li><a href="#SetMediaItemLeftTrim2">SetMediaItemLeftTrim2</a></li>
-                    <li><a href="#Save_Selected_Items_GuidSlot_SWS">Save_Selected_Items_GuidSlot_SWS</a></li>
-                    <li><a href="#Restore_Selected_Items_GuidSlot_SWS">Restore_Selected_Items_GuidSlot_SWS</a></li>
+
                     <li><a href="#SaveSoloMuteStateAllTracksGuidSlot_SWS">SaveSoloMuteStateAllTracksGuidSlot_SWS</a></li>
                     <li><a href="#RestoreSoloMuteStateAllTracksGuidSlot_SWS">RestoreSoloMuteStateAllTracksGuidSlot_SWS</a></li>
                     <li><a href="#SaveMuteStateAllItemsGuidSlot_SWS">SaveMuteStateAllItemsGuidSlot_SWS</a></li>
@@ -75,8 +74,8 @@
                     <li><a href="#GetPositionOfFirstItemAndEndOfLast">GetPositionOfFirstItemAndEndOfLast</a></li>
                     <li><a href="#GetPositionOfFirstSelectedItemAndEndOfLast">GetPositionOfFirstSelectedItemAndEndOfLast</a></li>
                     <li><a href="#RemoveStretchMarkersSavingTreatedWave_Render_SWS">RemoveStretchMarkersSavingTreatedWave_Render_SWS</a></li>
-                    <li><a href="#SaveSelTracksGuidSlot_SWS">SaveSelTracksGuidSlot_SWS</a></li>
-                    <li><a href="#RestoreSelTracksGuidSlot_SWS">RestoreSelTracksGuidSlot_SWS</a></li>
+                    <!-- <li><a href="#SaveSelTracksGuidSlot_SWS">SaveSelTracksGuidSlot_SWS</a></li> -->
+                    <!-- <li><a href="#RestoreSelTracksGuidSlot_SWS">RestoreSelTracksGuidSlot_SWS</a></li> -->
                     <li><a href="#GetPreventSpectralPeaksInTrack">GetPreventSpectralPeaksInTrack</a></li>
                     <li><a href="#SetPreventSpectralPeaksInTrack">SetPreventSpectralPeaksInTrack</a></li>
                     <li><a href="#CloseAllFxInAllItemsAndAllTake">CloseAllFxInAllItemsAndAllTake</a></li>
@@ -100,6 +99,10 @@
 					<li><a href="#EnumStartupScript">EnumStartupScript</a></li>
 					<li><a href="#GetSetTerminateAllInstancesOrStartNewOneKB_ini">GetSetTerminateAllInstancesOrStartNewOneKB_ini</a></li>
 					<li><a href="#ChangesInProject">ChangesInProject</a></li>
+					<li><a href="#Save_Selected_Items_Slot">Save_Selected_Items_Slot</a></li>
+					<li><a href="#Restore_Selected_Item_Slot">Restore_Selected_Item_Slot</a></li>
+				    <li><a href="#Save_Selected_Track_Slot">Save_Selected_Track_Slot</a></li>
+					<li><a href="#Restore_Selected_Track_Slot">Restore_Selected_Track_Slot</a></li>
 					
 					<li></li>
                     <li><a href="#LUA_Section"> --- LUA --- </a></li>
@@ -450,29 +453,29 @@
                         <p>Удлинить / укоротить Медиа Элемент Слева</p>
                         <p>_</p>
 					</div>
-
+					
+					
+					
 
                     <div class="right_function" id="Save_Selected_Items_GuidSlot_SWS">
-                        <code class="copy" id="Save_Selected_Items_GuidSlot_SWS_copy">
-                            Arc.Save_Selected_Items_GuidSlot_SWS(<em> numb </em><i>Slot</i> );
+                        <code class="copy_false" id="Save_Selected_Items_GuidSlot_SWS_copy_false">
+                            <a href="#Save_Selected_Items_GuidSlot_SWS_copy_false">Arc.Save_Selected_Items_GuidSlot_SWS(<em> numb </em><i>Slot</i> );</a>
                         </code>
                         <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
                         <br /><br />
-                        <p>Сохранить Выделенные элементы в слот "n"</p>
-                        <p>Востановить с помощью: <a href="#Restore_Selected_Items_GuidSlot_SWS">Restore_Selected_Items_GuidSlot_SWS</a></p>
+						<p>Устарело: используйте - <a href="#Save_Selected_Items_Slot">Save_Selected_Items_Slot</a>,&emsp;<a href="#Restore_Selected_Item_Slot">Restore_Selected_Item_Slot</a></p>
+						
                         <p>_</p>
 					</div>
 
 
                     <div class="right_function" id="Restore_Selected_Items_GuidSlot_SWS">
-                        <code class="copy" id="Restore_Selected_Items_GuidSlot_SWS_copy">
-                            Arc.Restore_Selected_Items_GuidSlot_SWS(<em> numb </em><i>Slot</i>,<em> boolean </em><i>clean</i> );
+                        <code class="copy_false" id="Restore_Selected_Items_GuidSlot_SWS_copy_false">
+                            <a href="#Restore_Selected_Items_GuidSlot_SWS_copy_false">Arc.Restore_Selected_Items_GuidSlot_SWS(<em> numb </em><i>Slot</i>,<em> boolean </em><i>clean</i> );</a>
                         </code>
                         <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
                         <br /><br />
-                        <p>Восстановить Выделенные элементы из слота "n"</p>
-                        <p>clean = true или 1 - чтобы зачистить сохраненный кэш.</p>
-                        <p>Сохранить с помощью: <a href="#Save_Selected_Items_GuidSlot_SWS">Save_Selected_Items_GuidSlot_SWS</a></p>
+						<p>Устарело: используйте - <a href="#Save_Selected_Items_Slot">Save_Selected_Items_Slot</a>,&emsp;<a href="#Restore_Selected_Item_Slot">Restore_Selected_Item_Slot</a></p>
                         <p>_</p>
 					</div>
 
@@ -558,29 +561,27 @@
                         <p>Удалить Маркеры Растяжки, Сохраняя Обработанную Волну, Удаление происходит при помощи рендера и это может замедлять процесс (Render) </p>
                         <p>_</p>
 					</div>
-
+					
+					
 
                     <div class="right_function" id="SaveSelTracksGuidSlot_SWS">
-                        <code class="copy" id="SaveSelTracksGuidSlot_SWS_copy">
-                            Arc.SaveSelTracksGuidSlot_SWS( <em>numb</em> <i>Slot</i> );
+                        <code class="copy_false" id="SaveSelTracksGuidSlot_SWS_copy_false">
+                            <a href="#SaveSelTracksGuidSlot_SWS_copy_false">Arc.SaveSelTracksGuidSlot_SWS( <em>numb</em> <i>Slot</i> );</a>
                         </code>
                         <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
                         <br /><br />
-                        <p>Сохранить Выделенные треки в слот "n".</p>
-                        <p>Востановить с помощью: <a href="#RestoreSelTracksGuidSlot_SWS">RestoreSelTracksGuidSlot_SWS</a></p>
+                        <p>Устарело: используйте - <a href="#Save_Selected_Track_Slot">Save_Selected_Track_Slot</a>,&emsp;<a href="#Restore_Selected_Track_Slot">Restore_Selected_Track_Slot</a></p>
                         <p>_</p>
 					</div>
 
 
                     <div class="right_function" id="RestoreSelTracksGuidSlot_SWS">
-                        <code class="copy" id="RestoreSelTracksGuidSlot_SWS_copy">
-                            Arc.RestoreSelTracksGuidSlot_SWS( <em>numb</em> <i>Slot</i>, <em>boolean</em> <i>clean</i> );
+                        <code class="copy_false" id="RestoreSelTracksGuidSlot_SWS_copy_false">
+                            <a href="#RestoreSelTracksGuidSlot_SWS_copy_false">Arc.RestoreSelTracksGuidSlot_SWS( <em>numb</em> <i>Slot</i>, <em>boolean</em> <i>clean</i> );</a>
                         </code>
                         <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
                         <br /><br />
-                        <p>Восстановить Выделенные треки из слота "n".</p>
-                        <p>clean = true или 1 - чтобы зачистить сохраненный кэш.</p>
-                        <p>Сохранить с помощью: <a href="#SaveSelTracksGuidSlot_SWS">SaveSelTracksGuidSlot_SWS</a></p>
+                        <p>Устарело: используйте - <a href="#Save_Selected_Track_Slot">Save_Selected_Track_Slot</a>,&emsp;<a href="#Restore_Selected_Track_Slot">Restore_Selected_Track_Slot</a></p>
 						<p>_</p>
                     </div>
 
@@ -960,6 +961,65 @@
 						<p>разных местах одновременно, buf  должен быть разный (defer)</p>
 						<p>_</p>
                     </div>
+					
+					
+					
+					
+					<div class="right_function" id="Save_Selected_Items_Slot">
+                        <code class="copy" id="Save_Selected_Items_Slot_copy">
+                            Arc.Save_Selected_Items_Slot(<em> numb/str </em><i>Slot</i> );
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Сохранить Выделенные элементы в слот "n" (внутри скрипта)</p>
+                        <p>Востановить с помощью: <a href="#Restore_Selected_Item_Slot">Restore_Selected_Item_Slot</a></p>
+                        <p>_</p>
+					</div>
+
+
+
+                    <div class="right_function" id="Restore_Selected_Item_Slot">
+                        <code class="copy" id="Restore_Selected_Item_Slot_copy">
+                            Arc.Restore_Selected_Item_Slot(<em> numb/str </em><i>Slot</i>,<em> numb/boolean </em><i>clean</i>,<em> numb/boolean </em><i>noSelPrevIt</i>,<em> numb/boolean </em><i>UpdateArrange</i> );
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Восстановить Выделенные элементы из слота "n"</p>
+                        <p>clean = true или 1 - чтобы зачистить сохраненный кэш.</p>
+						<p>noSelPrevIt установить true или 1 что бы не снимать выделение с предыдущих элементов</p>
+                        <p>Сохранить с помощью: <a href="#Save_Selected_Items_Slot">Save_Selected_Items_Slot</a></p>
+                        <p>_</p>
+					</div>
+					
+					
+					
+										
+					<div class="right_function" id="Save_Selected_Track_Slot">
+                        <code class="copy" id="Save_Selected_Track_Slot_copy">
+                            Arc.Save_Selected_Track_Slot(<em> numb/str </em><i>Slot</i> );
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Сохранить Выделенные треки в слот "n" (внутри скрипта)</p>
+                        <p>Востановить с помощью: <a href="#Restore_Selected_Track_Slot">Restore_Selected_Track_Slot</a></p>
+                        <p>_</p>
+					</div>
+
+
+
+                    <div class="right_function" id="Restore_Selected_Track_Slot">
+                        <code class="copy" id="Restore_Selected_Track_Slot_copy">
+                            Arc.Restore_Selected_Track_Slot(<em> numb/str </em><i>Slot</i>,<em> numb/boolean </em><i>clean</i>,<em> numb/boolean </em><i>noSelPrevIt</i>);
+                        </code>
+                        <img src="Image/copy.png" class="image_copy" style="display: none" alt="Copy">
+                        <br /><br />
+                        <p>Восстановить Выделенные треки из слота "n"</p>
+                        <p>clean = true или 1 - чтобы зачистить сохраненный кэш.</p>
+						<p>noSelPrevIt установить true или 1 что бы не снимать выделение с предыдущих треков</p>
+                        <p>Сохранить с помощью: <a href="#Save_Selected_Track_Slot">Save_Selected_Track_Slot</a></p>
+                        <p>_</p>
+					</div>
+					
 					
 					
 
